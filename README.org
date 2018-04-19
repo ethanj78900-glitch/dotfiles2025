@@ -11,3 +11,11 @@ includes :
   - Zsh config
   - Kitty config
   - i3 config
+
+* Usage
+  The =Makefile= handles multiple targets. To get all configurations just use
+  #+BEGIN_SRC bash
+  make all
+  #+END_SRC
+  Or just install targets by name of the executable (the Vim/Neovim target is
+  named vim, and will install symlinks to work with both programs)
