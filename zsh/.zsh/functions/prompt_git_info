@@ -1,0 +1,30 @@
+# vim: set ft=zsh :
+
+local prompt_color="%{${fg[yellow]}%}"
+
+if [ -n "$__CURRENT_GIT_BRANCH" ]; then
+    local s="("
+    s+="$__CURRENT_GIT_BRANCH"
+    case "$__CURRENT_GIT_BRANCH_STATUS" in
+        ahead)
+            s+=" ↑"
+            ;;
+        diverged)
+            s+=" ↕"
+            ;;
+        behind)
+            s+=" ↓"
+            ;;
+        *)
+            s+=" ↔"
+            ;;
+    esac
+    if [ -n "$__CURRENT_GIT_BRANCH_IS_DIRTY" ]; then
+        s+=" %{${fg[red]}%}✗"
+    else
+        s+=" %{${fg[green]}%}✓"
+    fi
+    s+="$prompt_color)"
+
+    printf " %s%s" $prompt_color $s
+fi

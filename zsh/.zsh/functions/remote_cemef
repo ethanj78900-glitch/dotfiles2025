@@ -1,0 +1,12 @@
+# vim: set ft=zsh :
+
+# This function uses Sophia's SSH tunnel to establish connection to CEMEF
+# It uses CEMEF_NICK to connect to CEMEF_HOST for remote desktop redirection
+cd
+ssh -M -S socket-cemef -f ${CEMEF_NICK}@ssh.sophia.mines-paristech.fr -L 3389:${CEMEF_HOST}.corp.sophia.mines-paristech.fr:3389 -L 2000:git.sophia.mines-paristech.fr:443 -L 2001:help.sophia.mines-paristech.fr:443 -N
+echo "Checking socket: "
+ssh -S socket-cemef -O check ${CEMEF_NICK}@ssh.sophia.mines-paristech.fr
+echo "Port 3389 redirects to ${CEMEF_HOST} for remote desktop"
+echo "Port 2000 redirects to git : https://localhost:2000 goes to GitLab"
+echo "Port 2001 redirects to help : https://localhost:2001 goes to help tickets"
+cd -

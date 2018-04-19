@@ -1,0 +1,4 @@
+# vim: set ft=zsh :
+
+# This function allows to create easily a gitignore file, using gitignore.io
+curl -L -s https://www.gitignore.io/api/$@ ;

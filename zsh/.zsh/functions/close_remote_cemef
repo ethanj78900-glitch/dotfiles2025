@@ -1,0 +1,6 @@
+# vim: set ft=zsh :
+
+# This function closes the socket to CEMEF via Sophia's SSH tunnel
+cd
+ssh -S socket-cemef -O exit ${CEMEF_NICK}@ssh.sophia.mines-paristech.fr
+cd -
