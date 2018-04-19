@@ -4,9 +4,11 @@
   This repo stores almost all the relevant dotfiles I would wish to take with
 me if I had to install on a new computer to do my stuff on. Currently this
 includes :
-  - Vim8/Nvim config (standalone in vim-setup)
+  - Vim8/Nvim config (standalone in
+    [[https://github.com/gagbo/vim-setup][vim-setup]])
     - This means the install process here clones the repo before stowing it
-  - Emacs config (standalone in emacs-setup)
+  - Emacs config (standalone in
+    [[https://github.com/gagbo/emacs-setup][emacs-setup]])
     - This means the install process here clones the repo before stowing it
   - Zsh config
   - Kitty config

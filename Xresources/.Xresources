@@ -1,0 +1,79 @@
+XTerm*locale: true
+XTerm*saveLines: 8192
+XTerm*faceName: xft:Hack:size=12:antialias=true
+
+URxvt.locale: true
+URxvt.saveLines: 8192
+URxvt.font: xft:Hack:size=12
+URxvt.perl-ext-common: default,matcher
+URxvt.scrollstyle:      plain
+URxvt.secondaryScroll:  true
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+! Iceberg
+! ! special
+! *.foreground:   #d2d4de
+! *.background:   #161821
+! *.cursorColor:  #d2d4de
+! 
+! ! black
+! *.color0:       #161821
+! *.color8:       #6b7089
+! 
+! ! red
+! *.color1:       #e27878
+! *.color9:       #e98989
+! 
+! ! green
+! *.color2:       #b4be82
+! *.color10:      #c0ca8e
+! 
+! ! yellow
+! *.color3:       #e2a478
+! *.color11:      #e9b189
+! 
+! ! blue
+! *.color4:       #84a0c6
+! *.color12:      #91acd1
+! 
+! ! magenta
+! *.color5:       #a093c7
+! *.color13:      #ada0d3
+! 
+! ! cyan
+! *.color6:       #89b8c2
+! *.color14:      #95c4ce
+! 
+! ! white
+! *.color7:       #c6c8d1
+! *.color15: #d2d4de
+
+! Spacegray colorscheme
+*background: #111314
+! Smaller contrast : bg: #242424
+*foreground: #B7BBB7
+! black
+*color0: #2C2F33
+*color8: #4B5056
+! red
+*color1: #B04C50
+*color9: #B04C50
+! green
+*color2: #919652
+*color10: #94985B
+! yellow
+*color3: #E2995C
+*color11: #E2995C
+! blue
+*color4: #66899D
+*color12: #66899D
+! magenta
+*color5: #8D6494
+*color13: #8D6494
+! cyan
+*color6: #527C77
+*color14: #527C77
+! white
+*color7: #606360
+*color15: #DDE3DC

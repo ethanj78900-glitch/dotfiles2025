@@ -1,31 +1,63 @@
 VIM_SETUP_GIT = "git@github.com:gagbo/vim-setup.git"
 EMACS_SETUP_GIT = "git@github.com:gagbo/emacs-setup.git"
 
-all: editors i3 kitty zsh
+all: editors i3 kitty zsh Xresources tern
 
 editors: vim emacs
 
-vim: nvim/.config/nvim/init.vim
-	mkdir -p nvim/.config/nvim
-	cd nvim/.config/nvim
-	git clone ${VIM_SETUP_GIT} .
-	git submodule init && git submodule update
-	cd -
-	stow install nvim -t ${HOME}
-	@echo"Run \"nvim -c PackUpdate\" to get all the plugins"
+# Clone the repository
+# If this fails, the repo is probably already there : so just pull it
+# If this works, then update the minpac submodule and stow so vim/nvim
+#     is ready for the PackUpdate
+vim:
+	@mkdir -p nvim/.config
+	@echo "********** Vim/Neovim setup  **********"
+	@echo "Cloning the repo..."
+	@git clone ${VIM_SETUP_GIT} nvim/.config/nvim && cd nvim/.config/nvim\
+	    && git submodule init && git submodule update && cd ../../..\
+	    && stow -S nvim -t ${HOME} ||\
+	    cd ../../.. && echo "Could not clone vim repo. Maybe you just need to \
+	cd to ${PWD}/nvim/.config/nvim and git pull"
+	@echo "Now you need to run \"nvim -c PackUpdate\" and the vim version \
+	of this to get all the plugins"
+	@echo ""
 
-emacs: emacs/.emacs.d/configuration.org
-	mkdir -p emacs/.emacs.d
-	cd emacs/.emacs.d
-	git clone ${EMACS_SETUP_GIT} .
-	cd -
-	stow install emacs -t ${HOME}
+# Clone the repository
+# If this fails, the repo is probably already there : so just pull it
+# If this works, stow the project
+emacs:
+	@mkdir -p emacs
+	@echo "************* Emacs setup *************"
+	@echo "Cloning or the repo..."
+	@git clone ${EMACS_SETUP_GIT} emacs/.emacs.d && stow -S emacs -t ${HOME} ||\
+	    echo "Could not clone emacs repo. Maybe you just need to \
+	cd to ${PWD}/emacs/.emacs.d and git pull"
+	@echo "You probably want to start emacs so that updates can go through"
+	@echo ""
 
 i3:
-	stow install i3 -t ${HOME}
+	@echo "************** i3 setup  **************"
+	stow -S i3 -t ${HOME}
+	@echo ""
 
 kitty:
-	stow install kitty -t ${HOME}
+	@echo "************* Kitty setup *************"
+	stow -S kitty -t ${HOME}
+	@echo ""
 
 zsh:
-	stow install zsh -t ${HOME}
+	@echo "************** Zsh setup **************"
+	stow -S zsh -t ${HOME}
+	@echo ""
+
+Xresources:
+	@echo "********** Xresources setup  **********"
+	stow -S Xresources -t ${HOME}
+	@echo ""
+
+tern:
+	@echo "************ Tern.js setup ************"
+	stow -S tern -t ${HOME}
+	@echo ""
+
+.PHONY: editors i3 kitty zsh Xresources tern vim emacs
