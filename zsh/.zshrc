@@ -94,6 +94,13 @@ precmd() {
     local preprompt_right_length=${#${(S%%)preprompt_right//(\%([KF1]|)\{*\}|\%[Bbkf])}}
     local num_filler_spaces=$((COLUMNS - preprompt_left_length - preprompt_right_length))
     print -Pr "$preprompt_left${(l:$num_filler_spaces:)}$preprompt_right"
+
+    # Change title in xterm or konsole
+    case $TERM in
+        xterm* || konsole*)
+            print -Pn "\e]0;%n @ %m: %~\a"
+            ;;
+    esac
 }
 preexec_functions+='preexec_update_git_vars'
 precmd_functions+='precmd_update_git_vars'
