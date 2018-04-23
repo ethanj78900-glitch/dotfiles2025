@@ -1,0 +1,7 @@
+# vim: set ft=zsh :
+
+case $TERM in
+    xterm* || konsole*)
+        print -Pn "\e]0;%n @ %m: %~\a"
+        ;;
+esac
