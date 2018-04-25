@@ -1,7 +1,7 @@
 VIM_SETUP_GIT = "git@github.com:gagbo/vim-setup.git"
 EMACS_SETUP_GIT = "git@github.com:gagbo/emacs-setup.git"
 
-all: editors i3 kitty zsh Xresources tern
+all: editors i3 kitty zsh Xresources tern tmux
 
 editors: vim emacs
 
