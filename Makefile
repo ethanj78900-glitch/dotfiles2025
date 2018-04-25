@@ -60,4 +60,9 @@ tern:
 	stow -S tern -t ${HOME}
 	@echo ""
 
-.PHONY: editors i3 kitty zsh Xresources tern vim emacs
+tmux:
+	@echo "************** Tmux setup *************"
+	stow -S tmux -t ${HOME}
+	@echo ""
+
+.PHONY: editors i3 kitty zsh Xresources tern vim emacs tmux
