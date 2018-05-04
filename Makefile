@@ -1,7 +1,7 @@
 VIM_SETUP_GIT = "git@github.com:gagbo/vim-setup.git"
 EMACS_SETUP_GIT = "git@github.com:gagbo/emacs-setup.git"
 
-all: editors i3 kitty zsh Xresources tern tmux
+all: editors i3 kitty zsh Xresources tern tmux IdeaVim
 
 editors: vim emacs
 
@@ -65,4 +65,9 @@ tmux:
 	stow -S tmux -t ${HOME}
 	@echo ""
 
-.PHONY: editors i3 kitty zsh Xresources tern vim emacs tmux
+IdeaVim:
+	@echo "************ IdeaVim setup ************"
+	stow -S IdeaVim -t ${HOME}
+	@echo ""
+
+.PHONY: editors i3 kitty zsh Xresources tern vim emacs tmux IdeaVim
