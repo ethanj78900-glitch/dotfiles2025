@@ -116,5 +116,3 @@ source /usr/share/fzf/shell/key-bindings.zsh
 # --follow: Follow symlinks
 # --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
-
-cat /etc/motd
