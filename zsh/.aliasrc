@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# Common ssh targets
+alias sb='ssh gagbo@Bulbizarre'
+alias sf='ssh gerry.agbobada@front-in1'
+
+# Common commands
+alias v='vimx'
+alias nv='nvim'
+alias e='emacs'
+alias o='okular'
+
+# Git shortcuts
+alias gl='git log --oneline --all --graph --decorate'
+
+# Folder information
+alias lll='exa -laFhS'
+alias ll='exa -l'
+alias la='exa -la'
+
+# Common folders
+alias ..='cd ..'
+alias .p='cd ~/projects'
+alias .e='cd ~/devel/ensmp'
+alias .s='cd ~/stow'
+alias .v='cd ~/.config/nvim'
