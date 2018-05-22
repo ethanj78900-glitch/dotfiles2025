@@ -5,13 +5,16 @@ alias sb='ssh gagbo@Bulbizarre'
 alias sf='ssh gerry.agbobada@front-in1'
 
 # Common commands
-alias v='vimx'
+alias vi='vimx'
 alias nv='nvim'
-alias e='emacs'
-alias o='okular'
+alias em='emacs'
+alias ok='okular'
 
 # Git shortcuts
 alias gl='git log --oneline --all --graph --decorate'
+
+# Misc magic
+alias loc='tokei'
 
 # Folder information
 alias lll='exa -laFhS'
