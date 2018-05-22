@@ -6,13 +6,13 @@ if [ -f /etc/bashrc ]; then
         . /etc/bashrc
 fi
 # Weboob completion
-if [ -f ${HOME}/soft/weboob-devel/tools/weboob_bash_completion ]; then
-        . ${HOME}/soft/weboob-devel/tools/weboob_bash_completion
+if [ -f "${HOME}/soft/weboob-devel/tools/weboob_bash_completion" ]; then
+        . "${HOME}/soft/weboob-devel/tools/weboob_bash_completion"
 fi
 
 # Rust completion
-if [ -f ${HOME}/.config/rustup.bash_completion ]; then
-        . ${HOME}/.config/rustup.bash-completion
+if [ -f "${HOME}/.config/rustup.bash_completion" ]; then
+        . "${HOME}/.config/rustup.bash-completion"
 fi
 
 # FZF bindings
@@ -20,12 +20,10 @@ if [ -f /usr/share/fzf/shell/key-bindings.bash ]; then
         . /usr/share/fzf/shell/key-bindings.bash
 fi
 
-alias gl='git log --oneline --all --graph --decorate'
-alias lll='exa -laFhS'
-alias ll='exa -l'
-alias maine="ssh -L 3389:${CEMEF_HOST}.corp.sophia.mines-paristech.fr:3389 ${CEMEF_NICK}@ssh.sophia.mines-paristech.fr"
-alias mainerdp="krdc rdp://${CEMEF_NICK}@localhost &"
-alias vim='nvim'
+if [[ -r ~/.aliasrc ]]; then
+    # See the zsh stow if the file is not found
+    . ~/.aliasrc
+fi
 
 remote_cemef(){
     cd || return 1

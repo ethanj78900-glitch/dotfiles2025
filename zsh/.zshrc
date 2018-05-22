@@ -6,7 +6,7 @@ fi
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-setopt appendhistory extendedglob nomatch histignorespace
+setopt appendhistory extendedglob nonomatch histignorespace
 unsetopt autocd beep notify
 bindkey -e
 # End of lines configured by zsh-newuser-install
@@ -103,9 +103,9 @@ chpwd_functions+='chpwd_update_git_vars'
 PROMPT=$'[%{${fg[blue]}%}%?%f%{${fg[default]}%}]$(prompt_git_info)%{${fg[default]}%} > '
 RPS1=""
 
-alias gl='git log --oneline --all --graph --decorate'
-alias lll='exa -laFhS'
-alias ll='exa -l'
+if [[ -r ~/.aliasrc ]]; then
+  . ~/.aliasrc
+fi
 
 # FZF bindings
 source /usr/share/fzf/shell/key-bindings.zsh
