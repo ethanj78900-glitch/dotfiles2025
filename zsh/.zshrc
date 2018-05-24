@@ -10,14 +10,13 @@ setopt appendhistory extendedglob nonomatch histignorespace
 unsetopt autocd beep notify
 bindkey -e
 # End of lines configured by zsh-newuser-install
+
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/gagbo/.zshrc'
 
 autoload -Uz compinit promptinit
 compinit
 promptinit
-
-prompt walters
 # End of lines added by compinstall
 
 # Allow functions in prompt
@@ -45,63 +44,22 @@ preexec () {
 
 zmodload zsh/mathfunc
 
-# Before each prompt display (a fortiori, the new prompt after a command ended) :
-# – if the command name is not empty, compute duration of last command (using data stored in preexec)
-# – if the command name is not empty and the duration is more than 10 sec, display a passive dialog box to notify
-# – Empty the command name so that if the next command is empty, it does not display an empty dialog box
-precmd() {
-    if [ "$CMD" != "" ]
-    then
-        local CMD_END_DATE=`date +%c`
-        local DELTA=$(($SECONDS - $CMD_START_TIME))
-        local DAYS=$((~~($DELTA / 86400)))
-        local HOURS=$((~~(($DELTA - $DAYS * 86400) / 3600)))
-        local MINUTES=$((~~(($DELTA - $DAYS * 86400 - $HOURS * 3600) / 60)))
-        local SECS=$(($DELTA - $DAYS * 86400 - $HOURS * 3600 - $MINUTES * 60))
-        local ELAPSED=''
-        test "$DAYS" != '0' && ELAPSED="${DAYS}d"
-        test "$HOURS" != '0' && ELAPSED="${ELAPSED}${HOURS}h"
-        test "$MINUTES" != '0' && ELAPSED="${ELAPSED}${MINUTES}m"
-        if [ "$ELAPSED" = '' ]; then
-            SECS="$(print -f "%.2f" $SECS)s"
-        elif [ "$DAYS" != '0' ]; then
-            SECS=''
-        else
-            SECS="$((~~$SECS))s"
-        fi
+precmd() {}
 
-        ELAPSED="${ELAPSED}${SECS}"
-        local ITALIC_ON=$'\e[3m'
-        local ITALIC_OFF=$'\e[23m'
-        export RPROMPT="%F{yellow}%{$ITALIC_ON%}${ELAPSED}%{$ITALIC_OFF%}%f"
-        unset CMD_START_TIME
+######### Antigen #########
+source ~/.zsh/antigen.zsh
 
-        # Notify the user if the command lasted longer than 10 minutes
-        # if [ $((int($DELTA))) -gt 600 ]
-        # then
-        #     kdialog --title "ZSH notifies" --passivepopup "The ‘$CMD’ command ended. [duration = $DELTA seconds] [End = $CMD_END_DATE]"
-        # fi
-    else
-        export RPROMPT=""
-    fi
+# Load oh-my-zsh
+antigen use oh-my-zsh
 
+antigen bundle git
+antigen bundle pip
+antigen bundle zsh-users/zsh-syntax-highlighting
 
-    CMD=""
+antigen theme candy
 
-    local preprompt_left="%F{cyan}%n@%m %F{green}%~"
-    local preprompt_right="%F{yellow}%*%f"
-    local preprompt_left_length=${#${(S%%)preprompt_left//(\%([KF1]|)\{*\}|\%[Bbkf])}}
-    local preprompt_right_length=${#${(S%%)preprompt_right//(\%([KF1]|)\{*\}|\%[Bbkf])}}
-    local num_filler_spaces=$((COLUMNS - preprompt_left_length - preprompt_right_length))
-    print -Pr "$preprompt_left${(l:$num_filler_spaces:)}$preprompt_right"
-}
-
-preexec_functions+='preexec_update_git_vars'
-precmd_functions+='precmd_update_git_vars'
-precmd_functions+='change_window_title'
-chpwd_functions+='chpwd_update_git_vars'
-PROMPT=$'[%{${fg[blue]}%}%?%f%{${fg[default]}%}]$(prompt_git_info)%{${fg[default]}%} > '
-RPS1=""
+antigen apply
+######## End of Antigen ########
 
 if [[ -r ~/.aliasrc ]]; then
   . ~/.aliasrc
