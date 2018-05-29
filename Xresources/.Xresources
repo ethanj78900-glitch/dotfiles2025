@@ -11,6 +11,14 @@ URxvt.secondaryScroll:  true
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 
+Emacs.menuBar: off
+Emacs.toolBar: off
+Emacs.verticalScrollBars: off
+Emacs.background: #111314
+Emacs.mode-line.attributeForeground: #93a1a1
+Emacs.mode-line.attributeBackground: #111314
+Emacs.mode-line.attributeBox: (:line-width 1 :color "#073642")
+
 ! Iceberg
 ! ! special
 ! *.foreground:   #d2d4de
