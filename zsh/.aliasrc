@@ -7,7 +7,8 @@ alias sf='ssh gerry.agbobada@front-in1'
 # Common commands
 alias vi='vimx'
 alias nv='nvim'
-alias em='emacs'
+alias em='emacsclient -nw -c -a ""'
+alias ge='emacsclient -n -c -a ""'
 alias ok='okular'
 
 # Git shortcuts
