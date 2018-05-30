@@ -1,44 +1,44 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!! XTerm settings !!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-XTerm*locale: true
-XTerm*saveLines: 8192
-XTerm*faceName: xft:Hack:size=12:antialias=true
+XTerm*locale:     true
+XTerm*saveLines:  8192
+XTerm*faceName:   xft:Hack:size=12:antialias=true
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!! URxvt settings !!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-URxvt.locale: true
-URxvt.saveLines: 8192
-URxvt.perl-ext-common: default,matcher,resize-font
+URxvt.locale:           true
+URxvt.saveLines:        8192
+URxvt.perl-ext-common:  default,matcher,resize-font
 URxvt.scrollstyle:      plain
 URxvt.secondaryScroll:  true
 
-URxvt.url-launcher: /usr/bin/xdg-open
-URxvt.matcher.button: 1
+URxvt.url-launcher:     /usr/bin/xdg-open
+URxvt.matcher.button:   1
 
-URxvt.font: xft:Fira Mono:size=12
-URxvt.keysym.C-Down: resize-font:smaller
-URxvt.keysym.C-Up: resize-font:bigger
+URxvt.font:             xft:Fira Mono:size=12
+URxvt.keysym.C-Down:    resize-font:smaller
+URxvt.keysym.C-Up:      resize-font:bigger
 
-URxvt*termName: rxvt-unicode-256color
-URxvt.depth: 24
-URxvt.geometry: 100x40
-URxvt*internalBorder: 24
-URxvt*externalBorder: 0
-URxvt*scrollBar: false
-URxvt*scrollBar_right: false
+URxvt*termName:         rxvt-unicode-256color
+URxvt.depth:            24
+URxvt.geometry:         100x40
+URxvt*internalBorder:   24
+URxvt*externalBorder:   0
+URxvt*scrollBar:        false
+URxvt*scrollBar_right:  false
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!! Emacs settings !!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-Emacs.menuBar: off
-Emacs.toolBar: off
-Emacs.verticalScrollBars: off
-Emacs.background: #111314
+Emacs.menuBar:                       off
+Emacs.toolBar:                       off
+Emacs.verticalScrollBars:            off
+Emacs.background:                    #111314
 Emacs.mode-line.attributeForeground: #93a1a1
 Emacs.mode-line.attributeBackground: #111314
-Emacs.mode-line.attributeBox: (:line-width 1 :color "#073642")
+Emacs.mode-line.attributeBox:        (:line-width 1 :color "#073642")
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!! Colorschemes !!!!!!!
@@ -87,26 +87,26 @@ Emacs.mode-line.attributeBox: (:line-width 1 :color "#073642")
 ! Smaller contrast : bg: #242424
 *foreground: #B7BBB7
 ! black
-*color0: #2C2F33
-*color8: #4B5056
+*color0:     #2C2F33
+*color8:     #4B5056
 ! red
-*color1: #B04C50
-*color9: #B04C50
+*color1:     #B04C50
+*color9:     #B04C50
 ! green
-*color2: #919652
-*color10: #94985B
+*color2:     #919652
+*color10:    #94985B
 ! yellow
-*color3: #E2995C
-*color11: #E2995C
+*color3:     #E2995C
+*color11:    #E2995C
 ! blue
-*color4: #66899D
-*color12: #66899D
+*color4:     #66899D
+*color12:    #66899D
 ! magenta
-*color5: #8D6494
-*color13: #8D6494
+*color5:     #8D6494
+*color13:    #8D6494
 ! cyan
-*color6: #527C77
-*color14: #527C77
+*color6:     #527C77
+*color14:    #527C77
 ! white
-*color7: #606360
-*color15: #DDE3DC
+*color7:     #606360
+*color15:    #DDE3DC
