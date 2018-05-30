@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# Quick terminals
+alias ki='kitty'
+alias ur='urxvt256c-ml'
+alias ko='konsole'
+alias xf='xfce4-terminal'
+
 # Common ssh targets
 alias sb='ssh gagbo@Bulbizarre'
 alias sf='ssh gerry.agbobada@front-in1'
