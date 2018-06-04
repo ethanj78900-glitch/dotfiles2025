@@ -1,0 +1,19 @@
+# Activate compositor
+xcompmgr -c &
+
+# Set desktop wallpaper
+feh --bg-scale ~/Pictures/artworks-000026011479-91ynsw-original.jpg &
+
+# Show system tray
+tint2 &
+
+# Show system info
+conky &
+
+
+## Autostart services
+# NetworkManager
+nm-applet &
+
+# Volume control
+volumeicon &

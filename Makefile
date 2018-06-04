@@ -1,7 +1,19 @@
 VIM_SETUP_GIT = "git@github.com:gagbo/vim-setup.git"
 EMACS_SETUP_GIT = "git@github.com:gagbo/emacs-setup.git"
 
-all: editors i3 kitty zsh bash Xresources tern tmux IdeaVim urxvt latte conky
+all: editors \
+    i3 \
+    openbox \
+    kitty \
+    zsh \
+    bash \
+    Xresources \
+    tern \
+    tmux \
+    IdeaVim \
+    urxvt \
+    latte \
+    conky
 
 editors: vim emacs
 
@@ -38,6 +50,11 @@ emacs:
 i3:
 	@echo "************** i3 setup  **************"
 	stow -S i3 -t ${HOME}
+	@echo ""
+
+openbox:
+	@echo "************ openbox setup ************"
+	stow -S openbox -t ${HOME}
 	@echo ""
 
 kitty:
@@ -90,4 +107,17 @@ conky:
 	stow -S conky -t ${HOME}
 	@echo ""
 
-.PHONY: editors i3 kitty zsh Xresources tern vim emacs tmux IdeaVim urxvt latte conky
+.PHONY: editors \
+    i3 \
+    openbox \
+    kitty \
+    zsh \
+    Xresources \
+    tern \
+    vim \
+    emacs \
+    tmux \
+    IdeaVim \
+    urxvt \
+    latte \
+    conky
