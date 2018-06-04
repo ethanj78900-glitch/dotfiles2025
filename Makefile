@@ -1,7 +1,7 @@
 VIM_SETUP_GIT = "git@github.com:gagbo/vim-setup.git"
 EMACS_SETUP_GIT = "git@github.com:gagbo/emacs-setup.git"
 
-all: editors i3 kitty zsh bash Xresources tern tmux IdeaVim urxvt latte
+all: editors i3 kitty zsh bash Xresources tern tmux IdeaVim urxvt latte conky
 
 editors: vim emacs
 
@@ -85,4 +85,9 @@ latte:
 	stow -S latte-dock -t ${HOME}
 	@echo ""
 
-.PHONY: editors i3 kitty zsh Xresources tern vim emacs tmux IdeaVim urxvt latte
+conky:
+	@echo "************ conky setup ************"
+	stow -S conky -t ${HOME}
+	@echo ""
+
+.PHONY: editors i3 kitty zsh Xresources tern vim emacs tmux IdeaVim urxvt latte conky
