@@ -1,5 +1,6 @@
 # Activate compositor
-xcompmgr -c &
+# xcompmgr -c &
+compton -cCfb --backend glx --vsync opengl &
 
 # Set desktop wallpaper
 feh --bg-scale ~/Pictures/artworks-000026011479-91ynsw-original.jpg &
