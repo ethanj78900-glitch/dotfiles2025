@@ -13,7 +13,8 @@ all: editors \
     IdeaVim \
     urxvt \
     latte \
-    conky
+    conky \
+    scripts
 
 editors: vim emacs
 
@@ -107,6 +108,11 @@ conky:
 	stow -S conky -t ${HOME}
 	@echo ""
 
+scripts:
+	@echo "*********** scripts setup ************"
+	stow -S scripts -t ${HOME}
+	@echo ""
+
 .PHONY: editors \
     i3 \
     openbox \
@@ -120,4 +126,5 @@ conky:
     IdeaVim \
     urxvt \
     latte \
-    conky
+    conky \
+    scripts
