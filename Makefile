@@ -2,6 +2,7 @@ VIM_SETUP_GIT = "git@github.com:gagbo/vim-setup.git"
 EMACS_SETUP_GIT = "git@github.com:gagbo/emacs-setup.git"
 
 all: editors \
+    plasma \
     i3 \
     openbox \
     kitty \
@@ -46,6 +47,11 @@ emacs:
 	    echo "Could not clone emacs repo. Maybe you just need to \
 	cd to ${PWD}/emacs/.emacs.d and git pull"
 	@echo "You probably want to start emacs so that updates can go through"
+	@echo ""
+
+plasma:
+	@echo "************ plasma setup  ************"
+	stow -S plasma -t ${HOME}
 	@echo ""
 
 i3:

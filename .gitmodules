@@ -4,3 +4,6 @@
 [submodule "openbox/.config/tint2/themes"]
 	path = openbox/.config/tint2/themes
 	url = https://github.com/addy-dclxvi/tint2-theme-collections
+[submodule "plasma/.icons/evolvere-icons-2"]
+	path = plasma/.icons/evolvere-icons-2
+	url = https://github.com/franksouza183/Evolvere-Icons
