@@ -1,3 +1,6 @@
 [submodule "openbox/.themes"]
 	path = openbox/.themes
 	url = https://github.com/addy-dclxvi/openbox-theme-collections
+[submodule "openbox/.config/tint2/themes"]
+	path = openbox/.config/tint2/themes
+	url = https://github.com/addy-dclxvi/tint2-theme-collections
