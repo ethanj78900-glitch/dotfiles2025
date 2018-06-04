@@ -1,5 +1,5 @@
-VIM_SETUP_GIT = "git@github.com:gagbo/vim-setup.git"
-EMACS_SETUP_GIT = "git@github.com:gagbo/emacs-setup.git"
+VIM_SETUP_GIT = "git@framagit.org:gagbo/vim-setup.git"
+EMACS_SETUP_GIT = "git@framagit.org:gagbo/emacs-setup.git"
 
 all: editors \
     plasma \
