@@ -120,6 +120,7 @@ scripts:
 	@echo ""
 
 .PHONY: editors \
+    plasma \
     i3 \
     openbox \
     kitty \
