@@ -15,6 +15,7 @@ all: editors \
     urxvt \
     latte \
     conky \
+    hack-fonts \
     scripts
 
 editors: vim emacs
@@ -114,6 +115,13 @@ conky:
 	stow -S conky -t ${HOME}
 	@echo ""
 
+hack-fonts:
+	@echo "********* Hack fonts setup **********"
+	stow -S hack-fonts -t ${HOME}
+	@echo "Rebuild font-cache"
+	fc-cache -f -v
+	@echo ""
+
 scripts:
 	@echo "*********** scripts setup ************"
 	stow -S scripts -t ${HOME}
@@ -134,4 +142,5 @@ scripts:
     urxvt \
     latte \
     conky \
+    hack-fonts \
     scripts
