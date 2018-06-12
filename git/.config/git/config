@@ -1,0 +1,15 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+    name = Gerry Agbobada
+    email = gagbobada+git@gmail.com
+
+[alias]
+    co = checkout
+    st = status
+    br = branch
+    ci = commit
+[url "git://anongit.kde.org/"]
+	insteadOf = kde:
+[url "git@git.kde.org:"]
+	pushInsteadOf = kde:

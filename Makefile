@@ -16,6 +16,7 @@ all: editors \
     latte \
     conky \
     hack-fonts \
+    git \
     scripts
 
 editors: vim emacs
@@ -122,6 +123,11 @@ hack-fonts:
 	fc-cache -f -v
 	@echo ""
 
+git:
+	@echo "************* git setup **************"
+	stow -S git -t ${HOME}
+	@
+
 scripts:
 	@echo "*********** scripts setup ************"
 	stow -S scripts -t ${HOME}
@@ -143,4 +149,5 @@ scripts:
     latte \
     conky \
     hack-fonts \
+    git \
     scripts
