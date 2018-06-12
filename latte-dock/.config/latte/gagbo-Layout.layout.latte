@@ -17,9 +17,6 @@ timerShow=200
 visibility=0
 wallpaperplugin=org.kde.image
 
-[Containments][1][Applets][101][Configuration][General]
-favoritesPortedToKAstats=true
-
 [Containments][1][Applets][105]
 immutability=1
 plugin=org.kde.activeWindowControl
@@ -49,17 +46,54 @@ tooltipTextType=1
 DialogHeight=720
 DialogWidth=960
 
-[Containments][1][Applets][2][Configuration][General]
-isInLatteDock=true
-launchers=multi;*;2;file:///usr/share/applications/firefox.desktop;file:///usr/share/applications/org.kde.dolphin.desktop
-launchers59=file:///usr/share/applications/firefox.desktop,file:///usr/share/applications/org.kde.dolphin.desktop
+[Containments][1][Applets][111]
+immutability=1
+plugin=org.kde.plasma.appmenu
+
+[Containments][1][Applets][111][Configuration]
+PreloadWeight=42
+
+[Containments][1][Applets][111][Configuration][ConfigDialog]
+DialogHeight=600
+DialogWidth=800
+
+[Containments][1][Applets][112]
+immutability=1
+plugin=org.communia.apptitle
+
+[Containments][1][Applets][112][Configuration]
+PreloadWeight=42
+
+[Containments][1][Applets][112][Configuration][ConfigDialog]
+DialogHeight=600
+DialogWidth=800
+
+[Containments][1][Applets][112][Configuration][General]
+bold=true
+showApplicationIcon=true
+textType=1
+
+[Containments][1][Applets][114]
+immutability=1
+plugin=org.kde.weatherWidget
+
+[Containments][1][Applets][114][Configuration]
+PreloadWeight=52
+
+[Containments][1][Applets][114][Configuration][ConfigDialog]
+DialogHeight=600
+DialogWidth=800
+
+[Containments][1][Applets][114][Configuration][General]
+lastReloadedMsJson={"cache_5a5440a6c6026f3e61c6aee598cae8dc":1528808101139,"cache_ce71ae4b54526bf1b927f46b5e20686b":1528808683542}
+places=[{"placeAlias":"Nice","placeIdentifier":"France/Provence-Alpes-Côte_d’Azur/Nice","providerId":"yrno"},{"placeAlias":"Sophia Antipolis","placeIdentifier":"France/Provence-Alpes-Côte_d’Azur/Sophia_Antipolis","providerId":"yrno"},{"placeAlias":"Versailles","placeIdentifier":"France/Île-de-France/Versailles","providerId":"yrno"},{"placeAlias":"Paris","placeIdentifier":"France/Île-de-France/Paris","providerId":"yrno"}]
 
 [Containments][1][Applets][4]
 immutability=1
 plugin=org.kde.plasma.kickoff
 
 [Containments][1][Applets][4][Configuration]
-PreloadWeight=100
+PreloadWeight=97
 
 [Containments][1][Applets][4][Configuration][ConfigDialog]
 DialogHeight=720
@@ -74,31 +108,18 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][1][Applets][5][Configuration]
-PreloadWeight=20
+PreloadWeight=14
 SystrayContainmentId=6
 
-[Containments][1][Applets][52][Configuration][General]
-isInLatteDock=true
-
-[Containments][1][Applets][57][Configuration][General]
-isInLatteDock=true
-
-[Containments][1][Applets][66]
-immutability=1
-plugin=org.kde.weatherWidget
-
-[Containments][1][Applets][66][Configuration]
-PreloadWeight=47
-
 [Containments][1][Applets][66][Configuration][General]
-lastReloadedMsJson={"cache_5a5440a6c6026f3e61c6aee598cae8dc":1527728267352}
+lastReloadedMsJson={"cache_5a5440a6c6026f3e61c6aee598cae8dc":1528808683840}
 
 [Containments][1][Applets][67]
 immutability=1
 plugin=audoban.applet.playbar
 
 [Containments][1][Applets][67][Configuration]
-PreloadWeight=42
+PreloadWeight=26
 
 [Containments][1][Applets][67][Configuration][General]
 RecentSources=[{"icon":"amarok","identity":"Amarok","source":"amarok"}]
@@ -108,7 +129,7 @@ immutability=1
 plugin=org.kde.plasma.systemloadviewer
 
 [Containments][1][Applets][68][Configuration]
-PreloadWeight=42
+PreloadWeight=26
 
 [Containments][1][Applets][68][Configuration][ConfigDialog]
 DialogHeight=720
@@ -118,18 +139,12 @@ DialogWidth=960
 monitorType=Circular
 setColorsManually=true
 
-[Containments][1][Applets][71][Configuration][General]
-lengthPercentage=800
-
-[Containments][1][Applets][72][Configuration][General]
-lengthPercentage=800
-
 [Containments][1][Applets][73]
 immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][1][Applets][73][Configuration]
-PreloadWeight=42
+PreloadWeight=26
 
 [Containments][1][Applets][73][Configuration][Appearance]
 dateFormat=longDate
@@ -145,48 +160,39 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][1][Applets][75][Configuration]
-PreloadWeight=47
-
-[Containments][1][Applets][77][Configuration][General]
-showOnlyCurrentScreen=true
-
-[Containments][1][Applets][88][Configuration][General]
-usePercentage=false
-usePixels=true
-
-[Containments][1][Applets][91]
-immutability=1
-plugin=audoban.applet.separator
+PreloadWeight=31
 
 [Containments][1][Applets][92]
 immutability=1
 plugin=audoban.applet.separator
 
+[Containments][1][Applets][92][Configuration]
+PreloadWeight=34
+
 [Containments][1][Applets][93]
 immutability=1
 plugin=audoban.applet.separator
 
-[Containments][1][Applets][98]
-immutability=1
-plugin=org.kde.plasma.userswitcher
-
-[Containments][1][Applets][98][Configuration]
-PreloadWeight=55
+[Containments][1][Applets][93][Configuration]
+PreloadWeight=34
 
 [Containments][1][Applets][99]
 immutability=1
 plugin=audoban.applet.separator
 
+[Containments][1][Applets][99][Configuration]
+PreloadWeight=34
+
 [Containments][1][ConfigDialog]
-DialogHeight=797
-DialogWidth=556
+DialogHeight=697
+DialogWidth=554
 
 [Containments][1][Configuration]
-PreloadWeight=10
+PreloadWeight=0
 
 [Containments][1][General]
 advanced=true
-appletOrder=4;98;99;105;91;66;75;68;67;73;92;5;93
+appletOrder=4;99;112;111;114;75;68;67;73;92;5;93
 autoDecreaseIconSize=false
 backgroundOnlyOnMaximized=true
 iconMargin=30
@@ -200,7 +206,7 @@ shadowSize=40
 shrinkThickMargins=true
 solidPanel=true
 splitterPosition=4
-splitterPosition2=10
+splitterPosition2=11
 titleTooltips=true
 zoomLevel=0
 
@@ -218,83 +224,63 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][6][Applets][10][Configuration]
-PreloadWeight=10
-
-[Containments][6][Applets][106][Configuration]
-PreloadWeight=42
-
-[Containments][6][Applets][107]
-immutability=1
-plugin=org.kde.redshiftControl
+PreloadWeight=0
 
 [Containments][6][Applets][11]
 immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][6][Applets][11][Configuration]
-PreloadWeight=15
-
-[Containments][6][Applets][12][Configuration]
-PreloadWeight=42
+PreloadWeight=5
 
 [Containments][6][Applets][13]
 immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][6][Applets][13][Configuration]
-PreloadWeight=10
+PreloadWeight=0
 
 [Containments][6][Applets][14]
 immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][6][Applets][14][Configuration]
-PreloadWeight=10
+PreloadWeight=0
 
 [Containments][6][Applets][16]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][6][Applets][16][Configuration]
-PreloadWeight=10
+PreloadWeight=0
 
 [Containments][6][Applets][17]
 immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][6][Applets][17][Configuration]
-PreloadWeight=10
-
-[Containments][6][Applets][43]
-immutability=1
-plugin=org.kde.discovernotifier
-
-[Containments][6][Applets][58][Configuration]
-PreloadWeight=42
-
-[Containments][6][Applets][59][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 
 [Containments][6][Applets][7]
 immutability=1
 plugin=org.kde.kdeconnect
 
 [Containments][6][Applets][7][Configuration]
-PreloadWeight=10
+PreloadWeight=0
 
 [Containments][6][Applets][9]
 immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][6][Applets][9][Configuration]
-PreloadWeight=10
+PreloadWeight=0
 
 [Containments][6][ConfigDialog]
 DialogHeight=720
 DialogWidth=960
 
 [Containments][6][Configuration]
-PreloadWeight=10
+PreloadWeight=0
 
 [Containments][6][General]
 extraItems=org.kde.plasma.networkmanagement,org.kde.plasma.clipboard,org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.discovernotifier,org.kde.redshiftControl
@@ -338,19 +324,27 @@ deviceFilterType=WhiteList
 deviceWhiteListRegexp=wlp3s0
 showLo=false
 
+[Containments][63][Applets][115][Configuration][General]
+resources=[{"alias":"CPU","childSourceObjects":{"acpi/Thermal_Zone/0-acpitz/Temperature":{"temperature":0},"acpi/Thermal_Zone/1-pch_skylake/Temperature":{"temperature":0},"acpi/Thermal_Zone/2-x86_pkg_temp/Temperature":{"temperature":0},"acpi/Thermal_Zone/3-iwlwifi/Temperature":{"temperature":0},"lmsensors/acpitz-virtual-0/temp1":{"temperature":0},"lmsensors/coretemp-isa-0000/Core_0":{"temperature":0},"lmsensors/coretemp-isa-0000/Core_1":{"temperature":0},"lmsensors/coretemp-isa-0000/Package_id_0":{"temperature":0},"lmsensors/iwlwifi-virtual-0/temp1":{"temperature":0},"lmsensors/pch_skylake-virtual-0/temp1":{"temperature":0},"udisks/Generic__SD_2fMMC_20120501030900000":{"temperature":0},"udisks/JMicron_Generic_0123456789ABCDEF":{"temperature":0},"udisks/SAMSUNG_MZVLW256HEHP_000L7_S35ENA0JA31868":{"temperature":0}},"meltdownTemperature":90,"overrideLimitTemperatures":false,"sourceName":"acpi/Thermal_Zone/2-x86_pkg_temp/Temperature","virtual":false,"warningTemperature":70},{"alias":"Wifi","childSourceObjects":{"acpi/Thermal_Zone/0-acpitz/Temperature":{"temperature":0},"acpi/Thermal_Zone/1-pch_skylake/Temperature":{"temperature":0},"acpi/Thermal_Zone/2-x86_pkg_temp/Temperature":{"temperature":0},"acpi/Thermal_Zone/3-iwlwifi/Temperature":{"temperature":0},"lmsensors/acpitz-virtual-0/temp1":{"temperature":0},"lmsensors/coretemp-isa-0000/Core_0":{"temperature":0},"lmsensors/coretemp-isa-0000/Core_1":{"temperature":0},"lmsensors/coretemp-isa-0000/Package_id_0":{"temperature":0},"lmsensors/iwlwifi-virtual-0/temp1":{"temperature":0},"lmsensors/pch_skylake-virtual-0/temp1":{"temperature":0},"udisks/Generic__SD_2fMMC_20120501030900000":{"temperature":0},"udisks/JMicron_Generic_0123456789ABCDEF":{"temperature":0},"udisks/SAMSUNG_MZVLW256HEHP_000L7_S35ENA0JA31868":{"temperature":0}},"meltdownTemperature":90,"overrideLimitTemperatures":false,"sourceName":"acpi/Thermal_Zone/3-iwlwifi/Temperature","virtual":false,"warningTemperature":70}]
+
 [Containments][63][Applets][64]
 immutability=1
 plugin=org.kde.latte.plasmoid
 
 [Containments][63][Applets][64][Configuration]
-PreloadWeight=42
+PreloadWeight=26
 
 [Containments][63][Applets][64][Configuration][General]
+groupingAppIdBlacklist=kitty.desktop
+groupingLauncherUrlBlacklist=applications:kitty.desktop
 isInLatteDock=true
 
 [Containments][63][Applets][94]
 immutability=1
 plugin=org.kde.plasma.pager
+
+[Containments][63][Applets][94][Configuration]
+PreloadWeight=34
 
 [Containments][63][Applets][94][Configuration][ConfigDialog]
 DialogHeight=720
@@ -363,24 +357,29 @@ displayedText=Number
 immutability=1
 plugin=audoban.applet.separator
 
+[Containments][63][Applets][95][Configuration]
+PreloadWeight=34
+
 [Containments][63][Applets][96]
 immutability=1
 plugin=audoban.applet.separator
 
+[Containments][63][Applets][96][Configuration]
+PreloadWeight=34
+
 [Containments][63][ConfigDialog]
-DialogHeight=797
-DialogWidth=556
+DialogHeight=697
+DialogWidth=554
 
 [Containments][63][Configuration]
-PreloadWeight=42
+PreloadWeight=26
 
 [Containments][63][General]
 advanced=true
-appletOrder=94;95;64;104;108;96
+appletOrder=94;95;64;96;104
 iconMargin=60
 iconSize=72
 launchersGroup=Global
-middleClickAction=ToggleGrouping
 titleTooltips=true
 
 [LayoutSettings]
