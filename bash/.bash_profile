@@ -15,17 +15,10 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.g
 # User specific environment and startup programs
 export PATH=$HOME/.local/bin:$HOME/bin:$PATH
 
-# Add OpenMPI 3.0.0 libraries to the linker
-export LD_LIBRARY_PATH="/home/gagbo/soft/openmpi-3.0.0/lib:${LD_LIBRARY_PATH}";
-# Use OpenMPI 3.0.0 by default
-export PATH="/home/gagbo/soft/openmpi-3.0.0/bin:${PATH}"
-
-# SML for OSSU course
-export PATH="/home/gagbo/soft/smlnj/bin:${PATH}"
 # Rust env
 export PATH="$HOME/.cargo/bin:$PATH"
 # Python stuff
-export LD_LIBRARY_PATH="/usr/lib64/paraview:${LD_LIBRARY_PATH}"
+# export LD_LIBRARY_PATH="/usr/lib64/paraview:${LD_LIBRARY_PATH}"
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
