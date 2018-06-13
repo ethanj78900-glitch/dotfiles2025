@@ -51,7 +51,7 @@ immutability=1
 plugin=org.kde.plasma.appmenu
 
 [Containments][1][Applets][111][Configuration]
-PreloadWeight=42
+PreloadWeight=34
 
 [Containments][1][Applets][111][Configuration][ConfigDialog]
 DialogHeight=600
@@ -62,7 +62,7 @@ immutability=1
 plugin=org.communia.apptitle
 
 [Containments][1][Applets][112][Configuration]
-PreloadWeight=42
+PreloadWeight=34
 
 [Containments][1][Applets][112][Configuration][ConfigDialog]
 DialogHeight=600
@@ -78,14 +78,14 @@ immutability=1
 plugin=org.kde.weatherWidget
 
 [Containments][1][Applets][114][Configuration]
-PreloadWeight=52
+PreloadWeight=44
 
 [Containments][1][Applets][114][Configuration][ConfigDialog]
 DialogHeight=600
 DialogWidth=800
 
 [Containments][1][Applets][114][Configuration][General]
-lastReloadedMsJson={"cache_5a5440a6c6026f3e61c6aee598cae8dc":1528808101139,"cache_ce71ae4b54526bf1b927f46b5e20686b":1528830312588}
+lastReloadedMsJson={"cache_5a5440a6c6026f3e61c6aee598cae8dc":1528808101139,"cache_ce71ae4b54526bf1b927f46b5e20686b":1528879603454}
 places=[{"placeAlias":"Nice","placeIdentifier":"France/Provence-Alpes-Côte_d’Azur/Nice","providerId":"yrno"},{"placeAlias":"Sophia Antipolis","placeIdentifier":"France/Provence-Alpes-Côte_d’Azur/Sophia_Antipolis","providerId":"yrno"},{"placeAlias":"Versailles","placeIdentifier":"France/Île-de-France/Versailles","providerId":"yrno"},{"placeAlias":"Paris","placeIdentifier":"France/Île-de-France/Paris","providerId":"yrno"}]
 
 [Containments][1][Applets][4]
@@ -93,7 +93,7 @@ immutability=1
 plugin=org.kde.plasma.kickoff
 
 [Containments][1][Applets][4][Configuration]
-PreloadWeight=100
+PreloadWeight=97
 
 [Containments][1][Applets][4][Configuration][ConfigDialog]
 DialogHeight=720
@@ -108,7 +108,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][1][Applets][5][Configuration]
-PreloadWeight=34
+PreloadWeight=66
 SystrayContainmentId=6
 
 [Containments][1][Applets][66][Configuration][General]
@@ -119,17 +119,17 @@ immutability=1
 plugin=audoban.applet.playbar
 
 [Containments][1][Applets][67][Configuration]
-PreloadWeight=26
+PreloadWeight=28
 
 [Containments][1][Applets][67][Configuration][General]
-RecentSources=[{"icon":"Gwenview","identity":"Gwenview","source":"Gwenview"},{"icon":"amarok","identity":"Amarok","source":"amarok"}]
+RecentSources=[{"icon":"plasma-browser-integration","identity":"Firefox Web Browser","source":"plasma-browser-integration"},{"icon":"Gwenview","identity":"Gwenview","source":"Gwenview"},{"icon":"amarok","identity":"Amarok","source":"amarok"}]
 
 [Containments][1][Applets][68]
 immutability=1
 plugin=org.kde.plasma.systemloadviewer
 
 [Containments][1][Applets][68][Configuration]
-PreloadWeight=26
+PreloadWeight=18
 
 [Containments][1][Applets][68][Configuration][ConfigDialog]
 DialogHeight=720
@@ -144,7 +144,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][1][Applets][73][Configuration]
-PreloadWeight=26
+PreloadWeight=18
 
 [Containments][1][Applets][73][Configuration][Appearance]
 dateFormat=longDate
@@ -160,28 +160,35 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][1][Applets][75][Configuration]
-PreloadWeight=31
+PreloadWeight=33
+
+[Containments][1][Applets][75][Configuration][ConfigDialog]
+DialogHeight=600
+DialogWidth=800
+
+[Containments][1][Applets][75][Configuration][General]
+showPercentage=true
 
 [Containments][1][Applets][92]
 immutability=1
 plugin=audoban.applet.separator
 
 [Containments][1][Applets][92][Configuration]
-PreloadWeight=34
+PreloadWeight=26
 
 [Containments][1][Applets][93]
 immutability=1
 plugin=audoban.applet.separator
 
 [Containments][1][Applets][93][Configuration]
-PreloadWeight=34
+PreloadWeight=26
 
 [Containments][1][Applets][99]
 immutability=1
 plugin=audoban.applet.separator
 
 [Containments][1][Applets][99][Configuration]
-PreloadWeight=34
+PreloadWeight=26
 
 [Containments][1][ConfigDialog]
 DialogHeight=697
@@ -231,7 +238,7 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][6][Applets][11][Configuration]
-PreloadWeight=10
+PreloadWeight=2
 
 [Containments][6][Applets][13]
 immutability=1
@@ -252,7 +259,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][6][Applets][16][Configuration]
-PreloadWeight=0
+PreloadWeight=25
 
 [Containments][6][Applets][17]
 immutability=1
@@ -266,7 +273,7 @@ immutability=1
 plugin=org.kde.kdeconnect
 
 [Containments][6][Applets][7][Configuration]
-PreloadWeight=10
+PreloadWeight=12
 
 [Containments][6][Applets][9]
 immutability=1
@@ -304,6 +311,9 @@ wallpaperplugin=org.kde.image
 immutability=1
 plugin=org.kde.thermalMonitor
 
+[Containments][63][Applets][104][Configuration]
+PreloadWeight=42
+
 [Containments][63][Applets][104][Configuration][ConfigDialog]
 DialogHeight=720
 DialogWidth=960
@@ -332,11 +342,9 @@ immutability=1
 plugin=org.kde.latte.plasmoid
 
 [Containments][63][Applets][64][Configuration]
-PreloadWeight=26
+PreloadWeight=18
 
 [Containments][63][Applets][64][Configuration][General]
-groupingAppIdBlacklist=kitty.desktop
-groupingLauncherUrlBlacklist=applications:kitty.desktop
 isInLatteDock=true
 
 [Containments][63][Applets][94]
@@ -344,7 +352,7 @@ immutability=1
 plugin=org.kde.plasma.pager
 
 [Containments][63][Applets][94][Configuration]
-PreloadWeight=34
+PreloadWeight=26
 
 [Containments][63][Applets][94][Configuration][ConfigDialog]
 DialogHeight=720
@@ -358,21 +366,21 @@ immutability=1
 plugin=audoban.applet.separator
 
 [Containments][63][Applets][95][Configuration]
-PreloadWeight=34
+PreloadWeight=26
 
 [Containments][63][Applets][96]
 immutability=1
 plugin=audoban.applet.separator
 
 [Containments][63][Applets][96][Configuration]
-PreloadWeight=34
+PreloadWeight=26
 
 [Containments][63][ConfigDialog]
 DialogHeight=697
 DialogWidth=554
 
 [Containments][63][Configuration]
-PreloadWeight=26
+PreloadWeight=18
 
 [Containments][63][General]
 advanced=true
@@ -380,6 +388,7 @@ appletOrder=94;95;64;96;104
 iconMargin=60
 iconSize=72
 launchersGroup=Global
+modifierClickAction=ToggleGrouping
 titleTooltips=true
 
 [LayoutSettings]
