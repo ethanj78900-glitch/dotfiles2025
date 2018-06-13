@@ -57,7 +57,7 @@ plasma:
 	stow -S plasma -t ${HOME}
 	@echo ""
 
-lxqt:
+lxqt: openbox
 	@echo "************* lxqt setup  *************"
 	stow -S lxqt -t ${HOME}
 	@echo ""
