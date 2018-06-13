@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE KSysGuardWorkSheet>
+<WorkSheet locked="0" title="CPU Performance" interval="1" rows="2" columns="2">
+ <host name="localhost" command="ksysguardd" port="-1" shell=""/>
+ <display hLines="1" autoRange="1" columnSpan="1" class="FancyPlotter" svgBackground="" row="0" manualRange="0" fontSize="8" version="1" vDistance="30" showUnit="0" hScale="6" stacked="0" title="Fréquence d'horloge" unit="" rowSpan="1" labels="1" vLines="0" vScroll="0" column="0">
+  <beam sensorType="float" sensorName="cpu/cpu0/clock" color="0xff0057ae" hostName="localhost"/>
+  <beam sensorType="float" sensorName="cpu/cpu1/clock" color="0xffe20800" hostName="localhost"/>
+  <beam sensorType="float" sensorName="cpu/cpu2/clock" color="0xfff3c300" hostName="localhost"/>
+  <beam sensorType="float" sensorName="cpu/cpu3/clock" color="0xffff0000" hostName="localhost"/>
+ </display>
+ <display columnSpan="1" class="MultiMeter" lowerLimit="0" mAlarmDigitColor="0xffff0000" row="0" hostName="localhost" sensorName="acpi/Thermal_Zone/2-x86_pkg_temp/Temperature" showUnit="1" upperLimitActive="0" normalDigitColor="0xff888888" title="Température" lowerLimitActive="0" unit="C" rowSpan="1" backgroundColor="0xffffffff" upperLimit="0" sensorType="integer" column="1"/>
+ <display hLines="1" autoRange="1" columnSpan="1" class="FancyPlotter" svgBackground="" row="1" manualRange="0" fontSize="8" version="1" vDistance="30" showUnit="0" hScale="6" stacked="0" title="Ventilateur 1" unit="" rowSpan="1" labels="1" vLines="0" vScroll="0" column="0">
+  <beam sensorType="float" sensorName="lmsensors/thinkpad-isa-0000/fan1" color="0xff0057ae" hostName="localhost"/>
+ </display>
+ <display hLines="1" autoRange="1" columnSpan="1" class="FancyPlotter" svgBackground="" row="1" manualRange="0" fontSize="8" version="1" vDistance="30" showUnit="0" hScale="6" stacked="0" title="Charge totale" unit="" rowSpan="1" labels="1" vLines="0" vScroll="0" column="1">
+  <beam sensorType="float" sensorName="cpu/system/TotalLoad" color="0xff0057ae" hostName="localhost"/>
+  <beam sensorType="float" sensorName="cpu/system/loadavg15" color="0xffff0000" hostName="localhost"/>
+ </display>
+</WorkSheet>
