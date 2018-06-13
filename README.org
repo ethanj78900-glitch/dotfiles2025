@@ -52,6 +52,9 @@ and the startup files are mostly defaults that I only lightly customized now.
 ** Plasma config
   Saving color schemes and icons to get a pretty plasma from the beginning.
 
+** LXQt config
+  Saving window_manager and a few session specific shortcuts/settings
+
 ** Tern config
   Configuration of tern, when I use tern js in vim.
 

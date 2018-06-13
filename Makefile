@@ -3,6 +3,7 @@ EMACS_SETUP_GIT = "git@framagit.org:gagbo/emacs-setup.git"
 
 all: editors \
     plasma \
+    lxqt \
     i3 \
     openbox \
     kitty \
@@ -54,6 +55,11 @@ emacs:
 plasma:
 	@echo "************ plasma setup  ************"
 	stow -S plasma -t ${HOME}
+	@echo ""
+
+lxqt:
+	@echo "************* lxqt setup  *************"
+	stow -S lxqt -t ${HOME}
 	@echo ""
 
 i3:
@@ -135,6 +141,7 @@ scripts:
 
 .PHONY: editors \
     plasma \
+    lxqt \
     i3 \
     openbox \
     kitty \
