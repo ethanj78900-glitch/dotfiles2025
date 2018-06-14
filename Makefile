@@ -5,6 +5,7 @@ all: editors \
     plasma \
     lxqt \
     i3 \
+    kvantum \
     openbox \
     kitty \
     zsh \
@@ -65,6 +66,11 @@ lxqt: openbox
 i3:
 	@echo "************** i3 setup  **************"
 	stow -S i3 -t ${HOME}
+	@echo ""
+
+kvantum:
+	@echo "************ kvantum setup  ************"
+	stow -S kvantum -t ${HOME}
 	@echo ""
 
 openbox:
@@ -143,6 +149,7 @@ scripts:
     plasma \
     lxqt \
     i3 \
+    kvantum \
     openbox \
     kitty \
     zsh \

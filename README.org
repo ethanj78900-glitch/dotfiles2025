@@ -52,6 +52,9 @@ and the startup files are mostly defaults that I only lightly customized now.
 ** Plasma config
   Saving color schemes and icons to get a pretty plasma from the beginning.
 
+** Kvantum config
+  Saving a few themes found on KDE-look.org
+
 ** LXQt config
   Saving window_manager and a few session specific shortcuts/settings
 
