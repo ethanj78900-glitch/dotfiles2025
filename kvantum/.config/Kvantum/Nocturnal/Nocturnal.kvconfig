@@ -38,11 +38,11 @@ scrollable_menu=false
 submenu_overlap=0
 menu_shadow_depth=5
 tooltip_shadow_depth=6
-translucent_windows=false
+translucent_windows=true
 reduce_window_opacity=0
 opaque=kaffeine,kmplayer,subtitlecomposer,kdenlive,vlc,smplayer,smplayer2,avidemux,avidemux2_qt4,avidemux3_qt4,avidemux3_qt5,kamoso,QtCreator,VirtualBox,trojita,dragon,digikam
-blurring=false
-popup_blurring=false
+blurring=true
+popup_blurring=true
 animate_states=true
 no_window_pattern=false
 splitter_width=4
@@ -70,6 +70,7 @@ button_icon_size=16
 toolbar_icon_size=22
 fill_rubberband=false
 dark_titlebar=true
+hide_combo_checkboxes=false
 
 
 [GeneralColors]
@@ -110,7 +111,7 @@ blur_konsole=false
 transparent_ktitle_label=true
 transparent_menutitle=true
 kcapacitybar_as_progressbar=true
-respect_darkness=false
+respect_darkness=true
 force_size_grip=true
 tint_on_mouseover=0
 no_selection_tint=true
@@ -121,6 +122,8 @@ transparent_arrow_button=true
 iconless_menu=false
 single_top_toolbar=true
 middle_click_scroll=false
+blur_translucent=true
+lxqtmainmenu_iconsize=0
 
 
 [PanelButtonCommand]
