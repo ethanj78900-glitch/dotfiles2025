@@ -13,6 +13,9 @@ includes :
   (standalone in [[https://github.com/gagbo/emacs-setup][emacs-setup]])
     - This means the install process here clones the repo before stowing it
 
+** Kakoune config
+  While I'm trying out Kakoune, the files will be barely stored here
+
 ** Zsh config
   Synchronization of .z files. There is also an .aliasrc in this folder
 used to set all aliases. It can also be manually extracted to be used with
