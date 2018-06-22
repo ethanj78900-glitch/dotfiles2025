@@ -1,5 +1,6 @@
 VIM_SETUP_GIT = "git@framagit.org:gagbo/vim-setup.git"
 EMACS_SETUP_GIT = "git@framagit.org:gagbo/emacs-setup.git"
+KAK_SETUP_GIT = "git@framagit.org:gagbo/kak-setup.git"
 
 all: editors \
     plasma \
@@ -21,7 +22,7 @@ all: editors \
     git \
     scripts
 
-editors: vim emacs
+editors: vim emacs kakoune
 
 # Clone the repository
 # If this fails, the repo is probably already there : so just pull it
@@ -51,6 +52,16 @@ emacs:
 	    echo "Could not clone emacs repo. Maybe you just need to \
 	cd to ${PWD}/emacs/.emacs.d and git pull"
 	@echo "You probably want to start emacs so that updates can go through"
+	@echo ""
+
+kakoune:
+	@mkdir -p kakoune/.config
+	@echo "************ kakoune setup  ************"
+	@echo "Cloning or the repo..."
+	@git clone ${KAK_SETUP_GIT} kakoune/.config/kak && stow -S kakoune -t ${HOME} ||\
+	    echo "Could not clone emacs repo. Maybe you just need to \
+	cd to ${PWD}/kakoune/.config/kak and git pull"
+	@echo "You probably want to start kakoune so that updates can go through"
 	@echo ""
 
 plasma:
