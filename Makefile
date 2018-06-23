@@ -8,6 +8,7 @@ all: editors \
     i3 \
     kvantum \
     openbox \
+    polybar \
     kitty \
     zsh \
     bash \
@@ -89,6 +90,11 @@ openbox:
 	stow -S openbox -t ${HOME}
 	@echo ""
 
+polybar:
+	@echo "************ polybar setup ************"
+	stow -S polybar -t ${HOME}
+	@echo ""
+
 kitty:
 	@echo "************* Kitty setup *************"
 	stow -S kitty -t ${HOME}
@@ -162,6 +168,7 @@ scripts:
     i3 \
     kvantum \
     openbox \
+    polybar \
     kitty \
     zsh \
     Xresources \

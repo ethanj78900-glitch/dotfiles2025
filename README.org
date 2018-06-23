@@ -52,6 +52,9 @@ software
 openbox themes are extracted as submodules from another repo (see .gitmodules)
 and the startup files are mostly defaults that I only lightly customized now.
 
+** Polybar config
+  Saving a few configs that caught my eye
+
 ** Plasma config
   Saving color schemes and icons to get a pretty plasma from the beginning.
 
