@@ -14,7 +14,9 @@ includes :
     - This means the install process here clones the repo before stowing it
 
 ** Kakoune config
-  While I'm trying out Kakoune, the files will be barely stored here
+  While I'm trying out Kakoune, the files will be barely stored here.
+
+  This also contains the configuration of ul/kak-lsp
 
 ** Zsh config
   Synchronization of .z files. There is also an .aliasrc in this folder
