@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Sample tmux script to set up a session for the current test case
+
+tmux has-session -t development
+if [ $? != 0 ]; then
+    tmux new-session     -s development -n editor -d
+    tmux send-keys       -t development 'cd ~/devel/ensmp/mtc/test_2d_is_elast'
+    tmux send-keys       -t development 'vimx'
+
+    tmux split-window -h -t development
+
+    tmux send-keys -t development:1.2 'cd ~/devel/ensmp/mtc/test_2d_is_elast'
+
+    tmux new-window -n paraview -t development
+    tmux send-keys -t development:2 'cd ~/devel/ensmp/mtc/test_2d_is_elast/results'
+
+    tmux select-window -t development:1
+fi
+tmux attach -t development
