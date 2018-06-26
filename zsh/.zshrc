@@ -55,7 +55,6 @@ antigen bundle git
 antigen bundle pip
 antigen bundle tmux
 antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-syntax-highlighting
 
 antigen theme candy
 
