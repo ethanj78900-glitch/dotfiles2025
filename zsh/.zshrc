@@ -48,13 +48,18 @@ precmd() {}
 
 ######### Antigen #########
 source ~/.zsh/antigen.zsh
-antigen init .antigenrc
-# TODO : Fix tmux sessions breaking
-    # When starting tmux, the prompt is broken until both commands below
-    # are entered. This is probably linked to antigen trying ot optimize
-    # stuff under the hood for interactive non-login shells
-    # antigen theme robbyrussell;
-    # antigen theme candy;
+# Load oh-my-zsh
+antigen use oh-my-zsh
+
+antigen bundle git
+antigen bundle pip
+antigen bundle tmux
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen theme candy
+
+antigen apply
 ######## End of Antigen ########
 
 if [[ -r ~/.aliasrc ]]; then
