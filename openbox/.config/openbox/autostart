@@ -3,7 +3,7 @@
 compton -cCfb --backend glx --vsync opengl &
 
 # Set desktop wallpaper
-feh --bg-scale ~/Pictures/artworks-000026011479-91ynsw-original.jpg &
+feh --bg-scale ~/Images/wallpapers/rukawa_slam_dunk_by_jmsedwrd.jpg &
 
 # Show system tray
 tint2 &
@@ -17,4 +17,5 @@ conky &
 nm-applet &
 
 # Volume control
-volumeicon &
+# Commented out because there is an autostart.desktop somewhere
+# volumeicon &
