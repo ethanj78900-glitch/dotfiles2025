@@ -6,7 +6,7 @@ compton -cCfb --backend glx --vsync opengl &
 feh --bg-scale ~/Images/wallpapers/rukawa_slam_dunk_by_jmsedwrd.jpg &
 
 # Show system tray
-tint2 &
+tint2 -c ~/.config/tint2/themes/triste/triste-blue.tint2rc &
 
 # Show system info
 conky &
