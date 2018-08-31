@@ -2,6 +2,7 @@ typeset -U path
 path=(~/.local/bin ~/bin $path[@])
 path=(~/soft/smlnj/bin $path[@])
 path=(~/.cargo/bin $path[@])
+path=(~/go/bin $path[@])
 path=(~/projects/OSSU/core_systems/ops-class/os161/tools/bin $path[@])
 
 # User specific environment and startup programs
