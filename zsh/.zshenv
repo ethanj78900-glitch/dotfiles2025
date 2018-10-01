@@ -8,8 +8,10 @@ path=(~/projects/OSSU/core_systems/ops-class/os161/tools/bin $path[@])
 # User specific environment and startup programs
 export PI=$(echo "scale=20; 4*a(1)" | bc -l)
 
-# Add OpenMPI 3.0.0 libraries to the linker
-export LD_LIBRARY_PATH="${HOME}/.local/lib:${LD_LIBRARY_PATH}";
+export LD_LIBRARY_PATH="${HOME}/.local/lib:${LD_LIBRARY_PATH}"
+if [[ -n "$(which rustc)" ]]; then
+    export LD_LIBRARY_PATH="$(rustc --print sysroot)/lib:${LD_LIBRARY_PATH}"
+fi
 
 # Python stuff
 if [[ -n "$(which paraview)" ]]; then
