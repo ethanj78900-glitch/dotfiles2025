@@ -102,7 +102,9 @@ kitty:
 
 zsh:
 	@echo "************** Zsh setup **************"
+	curl -sL git.io/antibody | sh -s
 	stow -S zsh -t ${HOME}
+	antibody bundle < ~/.zsh/plugins.txt > ~/.zsh_plugins.sh
 	@echo ""
 
 bash:

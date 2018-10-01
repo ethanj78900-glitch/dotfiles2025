@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Update Antibody plugins
+alias abup='antibody bundle < ~/.zsh/plugins.txt > ~/.zsh_plugins.sh'
+
 # Quick terminals
 alias ki='kitty'
 alias ur='urxvt256c-ml'

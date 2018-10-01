@@ -46,20 +46,10 @@ zmodload zsh/mathfunc
 
 precmd() {}
 
-######### Antigen #########
-source ~/.zsh/antigen.zsh
-# Load oh-my-zsh
-antigen use oh-my-zsh
-
-antigen bundle git
-antigen bundle pip
-antigen bundle tmux
-antigen bundle zsh-users/zsh-completions
-
-antigen theme candy
-
-antigen apply
-######## End of Antigen ########
+######### Antibody #########
+export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
+source ~/.zsh_plugins.sh
+######## End of Antibody ########
 
 if [[ -r ~/.aliasrc ]]; then
   . ~/.aliasrc

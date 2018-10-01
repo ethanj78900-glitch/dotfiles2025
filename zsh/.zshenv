@@ -14,6 +14,9 @@ export LD_LIBRARY_PATH="${HOME}/.local/lib:${LD_LIBRARY_PATH}";
 # Python stuff
 if [[ -n "$(which paraview)" ]]; then
     export LD_LIBRARY_PATH="/usr/lib64/paraview:${LD_LIBRARY_PATH}"
+    export PYTHONPATH="/usr/lib64/paraview/python2.7/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="/usr/lib64/paraview/site-packages:${PYTHONPATH}"
+    export PYTHONPATH="/usr/lib64/paraview/vtk:${PYTHONPATH}"
 fi
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
@@ -27,7 +30,7 @@ export Eigen3_DIR="/usr"
 export MTC_DIR="/usr/share/cimlib/mtc"
 export MAXSIM_DIR="${HOME}/devel/ensmp/maxsim"
 export FELICIA_DIR="${HOME}/.local"
-export MPCP_DIR="${HOME}/devel/ensmp/MPCP/build"
+export MPCP_DIR="${HOME}/devel/ensmp/MPCP/build/install"
 export CIMLIB_HOME="${HOME}/devel/ensmp/cimlib"
 export FELICIA_HOME="${HOME}/devel/ensmp/felicia"
 export MPCP_HOME="${HOME}/devel/ensmp/MPCP"

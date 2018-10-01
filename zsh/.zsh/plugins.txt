@@ -1,0 +1,11 @@
+# Plugins
+robbyrussell/oh-my-zsh
+robbyrussell/oh-my-zsh folder:plugins/git
+robbyrussell/oh-my-zsh folder:plugins/pip
+robbyrussell/oh-my-zsh folder:plugins/tmux
+zsh-users/zsh-completions
+
+
+# Prompt theme
+robbyrussell/oh-my-zsh folder:plugins/git-prompt
+gagbo/moux
