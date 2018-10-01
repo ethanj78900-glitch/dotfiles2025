@@ -140,3 +140,5 @@ anaconda-mode/
 # End of https://www.gitignore.io/api/emacs
 # Jetbrains IDE configurations
 .idea/
+TAGS
+.vscode/
