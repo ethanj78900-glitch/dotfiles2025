@@ -10,6 +10,7 @@ all: editors \
     openbox \
     polybar \
     kitty \
+    ctags \
     zsh \
     bash \
     Xresources \
@@ -112,6 +113,11 @@ bash:
 	stow -S bash -t ${HOME}
 	@echo ""
 
+ctags:
+	@echo "************** Ctags setup *************"
+	stow -S ctags -t ${HOME}
+	@echo ""
+
 Xresources:
 	@echo "********** Xresources setup  **********"
 	stow -S Xresources -t ${HOME}
@@ -172,6 +178,7 @@ scripts:
     openbox \
     polybar \
     kitty \
+    ctags \
     zsh \
     Xresources \
     tern \
