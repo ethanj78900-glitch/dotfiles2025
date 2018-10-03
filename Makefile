@@ -68,36 +68,43 @@ kakoune:
 
 plasma:
 	@echo "************ plasma setup  ************"
+	mkdir -p ${HOME}/.config
 	stow -S plasma -t ${HOME}
 	@echo ""
 
 lxqt: openbox
 	@echo "************* lxqt setup  *************"
+	mkdir -p ${HOME}/.config
 	stow -S lxqt -t ${HOME}
 	@echo ""
 
 i3:
 	@echo "************** i3 setup  **************"
+	mkdir -p ${HOME}/.config
 	stow -S i3 -t ${HOME}
 	@echo ""
 
 kvantum:
 	@echo "************ kvantum setup  ************"
+	mkdir -p ${HOME}/.config
 	stow -S kvantum -t ${HOME}
 	@echo ""
 
 openbox:
 	@echo "************ openbox setup ************"
+	mkdir -p ${HOME}/.config
 	stow -S openbox -t ${HOME}
 	@echo ""
 
 polybar:
 	@echo "************ polybar setup ************"
+	mkdir -p ${HOME}/.config
 	stow -S polybar -t ${HOME}
 	@echo ""
 
 kitty:
 	@echo "************* Kitty setup *************"
+	mkdir -p ${HOME}/.config
 	stow -S kitty -t ${HOME}
 	@echo ""
 
@@ -120,53 +127,62 @@ ctags:
 
 Xresources:
 	@echo "********** Xresources setup  **********"
+	mkdir -p ${HOME}/.config
 	stow -S Xresources -t ${HOME}
 	@echo ""
 
 tern:
 	@echo "************ Tern.js setup ************"
+	mkdir -p ${HOME}/.config
 	stow -S tern -t ${HOME}
 	@echo ""
 
 tmux:
 	@echo "************** Tmux setup *************"
+	mkdir -p ${HOME}/.config
 	stow -S tmux -t ${HOME}
 	@echo ""
 
 IdeaVim:
 	@echo "************ IdeaVim setup ************"
+	mkdir -p ${HOME}/.config
 	stow -S IdeaVim -t ${HOME}
 	@echo ""
 
 urxvt:
 	@echo "************ urxvt setup ************"
+	mkdir -p ${HOME}/.config
 	stow -S urxvt -t ${HOME}
 	@echo ""
 
 latte:
 	@echo "************ latte setup ************"
+	mkdir -p ${HOME}/.config
 	stow -S latte-dock -t ${HOME}
 	@echo ""
 
 conky:
 	@echo "************ conky setup ************"
+	mkdir -p ${HOME}/.config
 	stow -S conky -t ${HOME}
 	@echo ""
 
 hack-fonts:
 	@echo "********* Hack fonts setup **********"
-	stow -S hack-fonts -t ${HOME}
+	stow -S hack-fonts -t ${HOME} --no-folding
 	@echo "Rebuild font-cache"
 	fc-cache -f -v
 	@echo ""
 
 git:
 	@echo "************* git setup **************"
+	mkdir -p ${HOME}/.config
 	stow -S git -t ${HOME}
 	@
 
 scripts:
 	@echo "*********** scripts setup ************"
+	mkdir -p ${HOME}/.local
 	stow -S scripts -t ${HOME}
 	@echo ""
 
