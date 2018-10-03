@@ -9,12 +9,12 @@ path=(~/projects/OSSU/core_systems/ops-class/os161/tools/bin $path[@])
 export PI=$(echo "scale=20; 4*a(1)" | bc -l)
 
 export LD_LIBRARY_PATH="${HOME}/.local/lib:${LD_LIBRARY_PATH}"
-if [[ -n "$(which rustc)" ]]; then
+if [[ -x "$(command -v rustc)" ]]; then
     export LD_LIBRARY_PATH="$(rustc --print sysroot)/lib:${LD_LIBRARY_PATH}"
 fi
 
 # Python stuff
-if [[ -n "$(which paraview)" ]]; then
+if [[ -x "$(command -v paraview)" ]]; then
     export LD_LIBRARY_PATH="/usr/lib64/paraview:${LD_LIBRARY_PATH}"
     export PYTHONPATH="/usr/lib64/paraview/python2.7/site-packages:${PYTHONPATH}"
     export PYTHONPATH="/usr/lib64/paraview/site-packages:${PYTHONPATH}"
