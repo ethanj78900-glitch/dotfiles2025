@@ -169,6 +169,7 @@ conky:
 
 hack-fonts:
 	@echo "********* Hack fonts setup **********"
+	mkdir -p ${HOME}/.local/share/fonts/ttf
 	stow -S hack-fonts -t ${HOME} --no-folding
 	@echo "Rebuild font-cache"
 	fc-cache -f -v
