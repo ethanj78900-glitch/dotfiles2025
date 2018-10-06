@@ -6,6 +6,7 @@ all: editors \
     plasma \
     lxqt \
     i3 \
+    sway \
     kvantum \
     openbox \
     polybar \
@@ -82,6 +83,12 @@ i3:
 	@echo "************** i3 setup  **************"
 	mkdir -p ${HOME}/.config
 	stow -S i3 -t ${HOME}
+	@echo ""
+
+sway:
+	@echo "************* sway setup  *************"
+	mkdir -p ${HOME}/.config
+	stow -S sway -t ${HOME}
 	@echo ""
 
 kvantum:
@@ -192,6 +199,7 @@ scripts:
     plasma \
     lxqt \
     i3 \
+    sway \
     kvantum \
     openbox \
     polybar \
