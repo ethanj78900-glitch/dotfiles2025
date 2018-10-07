@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
+set mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -95,16 +95,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: "
-set $ws2 "2: "
-set $ws3 "3: "
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9: "
-set $ws10 "10: 𝄞"
+set ws1 "1: "
+set ws2 "2: "
+set ws3 "3: "
+set ws4 "4"
+set ws5 "5"
+set ws6 "6"
+set ws7 "7"
+set ws8 "8"
+set ws9 "9: "
+set ws10 "10: 𝄞"
 
 # switch to workspace
 bindsym $mod+1      workspace $ws1
@@ -145,7 +145,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'sway-msg exit'"
+bindsym $mod+Shift+e exec "swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'sway-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -176,26 +176,26 @@ bindsym $mod+r mode "resize"
 
 ## Colors
 
-set $foc_bord "#4c7899"
-set $foc_bg   "#285577"
-set $foc_text "#ffffff"
-set $foc_ind  "#2e9ef4"
-set $foc_cb   $foc_bg
+set foc_bord "#4c7899"
+set foc_bg   "#285577"
+set foc_text "#ffffff"
+set foc_ind  "#2e9ef4"
+set foc_cb   $foc_bg
 
-set $fIn_bg   "#5f676a"
-set $fIn_ind  "#484e50"
-set $fIn_cb   $fIn_bg
+set fIn_bg   "#5f676a"
+set fIn_ind  "#484e50"
+set fIn_cb   $fIn_bg
 
-set $ina_bord "#333333"
-set $ina_bg   "#222222"
-set $ina_text "#888888"
-set $ina_ind  "#292d2e"
-set $ina_cb   $ina_bg
+set ina_bord "#333333"
+set ina_bg   "#222222"
+set ina_text "#888888"
+set ina_ind  "#292d2e"
+set ina_cb   $ina_bg
 
-set $urg_bord "#2f343a"
-set $urg_bg   "#900000"
+set urg_bord "#2f343a"
+set urg_bg   "#900000"
 
-set $dark_ph  "#0c0c0c"
+set dark_ph  "#0c0c0c"
 
 # client.focused
 #     A client which currently has the focus.
@@ -230,17 +230,16 @@ client.background       $foc_text
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-# bar {
-#         status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
-#         position top
-# }
+bar {
+        position top
+}
 
-set $locker ~/.config/sway/scripts/lock-laptop.sh && sleep 1
+set locker ~/.config/sway/scripts/lock-laptop.sh && sleep 1
 
 # lock the computer
 bindsym Control+$mod+l exec $locker
 
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+set mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id $locker, mode "default"
     bindsym e exec --no-startup-id sway-msg exit, mode "default"
@@ -256,22 +255,6 @@ mode "$mode_system" {
 
 bindsym $mod+Delete mode "$mode_system"
 
-## Plasma Integration
-# Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
-exec --no-startup-id wmctrl -c Plasma
-for_window [title="Bureau — Plasma"] kill; floating enable; border none
-
-## Avoid tiling popups, dropdown windows from plasma
-# for the first time, manually resize them, i3 will remember the setting for floating windows
-for_window [class="plasmashell"] floating enable;
-for_window [class="Plasma"] floating enable; border none
-for_window [title="plasma-desktop"] floating enable; border none
-for_window [title="win7"] floating enable; border none
-for_window [class="krunner"] floating enable; border none
-for_window [class="Kmix"] floating enable; border none
-for_window [class="Klipper"] floating enable; border none
-for_window [class="Plasmoidviewer"] floating enable; border none
-
 assign [class="konversation"] $ws3
 assign [class="Firefox"] $ws1
 assign [class="Amarok"] $ws10
@@ -279,10 +262,10 @@ assign [class="Clementine"] $ws10
 assign [class="KeePass2"] $ws9
 
 # Launching programs
-exec_always output --bg-scale /home/gagbo/Pictures/Y5Sd2Yj-slam-dunk-anime-wallpaper.jpg
-# exec --no-startup-id nm-applet
-# exec --no-startup-id owncloud
-# exec --no-startup-id start-pulseaudio-x11
+output * bg /home/gagbo/Pictures/Y5Sd2Yj-slam-dunk-anime-wallpaper.jpg fill
+# exec  nm-applet
+# exec  owncloud
+# exec  start-pulseaudio-x11
 exec keepass
 exec konversation
 # exec firefox
