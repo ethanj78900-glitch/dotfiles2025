@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set mod Mod4
+set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -95,16 +95,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set ws1 "1: "
-set ws2 "2: "
-set ws3 "3: "
-set ws4 "4"
-set ws5 "5"
-set ws6 "6"
-set ws7 "7"
-set ws8 "8"
-set ws9 "9: "
-set ws10 "10: 𝄞"
+set $ws1 "1: "
+set $ws2 "2: "
+set $ws3 "3: "
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9: "
+set $ws10 "10: 𝄞"
 
 # switch to workspace
 bindsym $mod+1      workspace $ws1
@@ -149,24 +149,24 @@ bindsym $mod+Shift+e exec "swaynag -t warning -m 'You pressed the exit shortcut.
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+# These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
+# Pressing left will shrink the window’s width.
+# Pressing right will grow the window’s width.
+# Pressing up will shrink the window’s height.
+# Pressing down will grow the window’s height.
+    bindsym h resize shrink width 10 px or 10 ppt
         bindsym j resize grow height 10 px or 10 ppt
         bindsym k resize shrink height 10 px or 10 ppt
         bindsym l resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
+# same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape or $mod+r
+# back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
@@ -176,26 +176,26 @@ bindsym $mod+r mode "resize"
 
 ## Colors
 
-set foc_bord "#4c7899"
-set foc_bg   "#285577"
-set foc_text "#ffffff"
-set foc_ind  "#2e9ef4"
-set foc_cb   $foc_bg
+set $foc_bord "#4c7899"
+set $foc_bg   "#285577"
+set $foc_text "#ffffff"
+set $foc_ind  "#2e9ef4"
+set $foc_cb   $foc_bg
 
-set fIn_bg   "#5f676a"
-set fIn_ind  "#484e50"
-set fIn_cb   $fIn_bg
+set $fIn_bg   "#5f676a"
+set $fIn_ind  "#484e50"
+set $fIn_cb   $fIn_bg
 
-set ina_bord "#333333"
-set ina_bg   "#222222"
-set ina_text "#888888"
-set ina_ind  "#292d2e"
-set ina_cb   $ina_bg
+set $ina_bord "#333333"
+set $ina_bg   "#222222"
+set $ina_text "#888888"
+set $ina_ind  "#292d2e"
+set $ina_cb   $ina_bg
 
-set urg_bord "#2f343a"
-set urg_bg   "#900000"
+set $urg_bord "#2f343a"
+set $urg_bg   "#900000"
 
-set dark_ph  "#0c0c0c"
+set $dark_ph  "#0c0c0c"
 
 # client.focused
 #     A client which currently has the focus.
@@ -231,15 +231,15 @@ client.background       $foc_text
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        position top
+    position top
 }
 
-set locker ~/.config/sway/scripts/lock-laptop.sh && sleep 1
+set $locker ~/.config/sway/scripts/lock-laptop.sh && sleep 1
 
 # lock the computer
 bindsym Control+$mod+l exec $locker
 
-set mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id $locker, mode "default"
     bindsym e exec --no-startup-id sway-msg exit, mode "default"
@@ -262,7 +262,7 @@ assign [class="Clementine"] $ws10
 assign [class="KeePass2"] $ws9
 
 # Launching programs
-output * bg /home/gagbo/Pictures/Y5Sd2Yj-slam-dunk-anime-wallpaper.jpg fill
+output * bg /home/gagbo/Images/wallpapers/rukawa_slam_dunk_by_jmsedwrd.jpg fill
 # exec  nm-applet
 # exec  owncloud
 # exec  start-pulseaudio-x11
