@@ -27,7 +27,7 @@ font pango:Noto Sans 10
 # font, it doesn’t scale on retina/hidpi displays.
 
 # Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
+floating_modifier $mod normal
 
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
@@ -36,12 +36,12 @@ bindsym $mod+Return exec kitty
 # kill focused window
 bindsym $mod+Shift+q kill
 
+set $menu dmenu_path | dmenu | xargs swaymsg exec
+
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec $menu
+
+output * bg /home/gagbo/Images/wallpapers/rukawa_slam_dunk_by_jmsedwrd.jpg fill
 
 # change focus
 bindsym $mod+h focus left
@@ -262,7 +262,6 @@ assign [class="Clementine"] $ws10
 assign [class="KeePass2"] $ws9
 
 # Launching programs
-output * bg /home/gagbo/Images/wallpapers/rukawa_slam_dunk_by_jmsedwrd.jpg fill
 # exec  nm-applet
 # exec  owncloud
 # exec  start-pulseaudio-x11
@@ -270,3 +269,5 @@ exec keepass
 exec konversation
 # exec firefox
 # exec amarok
+
+include @sysconfdir@/sway/config.d/*
