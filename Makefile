@@ -5,6 +5,8 @@ KAK_SETUP_GIT = "git@framagit.org:gagbo/kak-setup.git"
 all: editors \
     plasma \
     lxqt \
+    i3blocks \
+    i3status \
     i3 \
     sway \
     kvantum \
@@ -79,13 +81,25 @@ lxqt: openbox
 	stow -S lxqt -t ${HOME}
 	@echo ""
 
-i3:
+i3blocks:
+	@echo "*********** i3blocks setup  ***********"
+	mkdir -p ${HOME}/.config
+	stow -S i3blocks -t ${HOME}
+	@echo ""
+
+i3status:
+	@echo "*********** i3status setup  ***********"
+	mkdir -p ${HOME}/.config
+	stow -S i3status -t ${HOME}
+	@echo ""
+
+i3: i3blocks i3status
 	@echo "************** i3 setup  **************"
 	mkdir -p ${HOME}/.config
 	stow -S i3 -t ${HOME}
 	@echo ""
 
-sway:
+sway: i3status
 	@echo "************* sway setup  *************"
 	mkdir -p ${HOME}/.config
 	stow -S sway -t ${HOME}
@@ -198,6 +212,8 @@ scripts:
 .PHONY: editors \
     plasma \
     lxqt \
+    i3blocks \
+    i3status \
     i3 \
     sway \
     kvantum \

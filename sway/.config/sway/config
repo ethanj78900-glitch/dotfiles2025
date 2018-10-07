@@ -205,6 +205,8 @@
 # Bar {{{1
     bar {
         position top
+        status_command i3status
+        separator_symbol "|"
     }
 
 # Shutdown/Logout menu {{{1
@@ -228,15 +230,6 @@
     assign [class="konversation"] $ws3
     assign [class="Firefox"] $ws1
     assign [class="KeePass2"] $ws9
-
-# Launching programs {{{1
-    #exec nm-applet
-    #exec owncloud
-    #exec start-pulseaudio-x11
-    #exec keepass
-    #exec konversation
-    #exec firefox
-    #exec amarok
 
 # Including the other stuff {{{1
     include @sysconfdir@/sway/config.d/*
