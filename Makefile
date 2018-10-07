@@ -9,6 +9,7 @@ all: editors \
     i3status \
     i3 \
     sway \
+    redshift \
     kvantum \
     openbox \
     polybar \
@@ -103,6 +104,12 @@ sway: i3status
 	@echo "************* sway setup  *************"
 	mkdir -p ${HOME}/.config
 	stow -S sway -t ${HOME}
+	@echo ""
+
+redshift:
+	@echo "*********** redshift setup  ***********"
+	mkdir -p ${HOME}/.config
+	stow -S redshift -t ${HOME}
 	@echo ""
 
 kvantum:
@@ -216,6 +223,7 @@ scripts:
     i3status \
     i3 \
     sway \
+    redshift \
     kvantum \
     openbox \
     polybar \
