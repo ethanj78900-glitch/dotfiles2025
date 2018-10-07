@@ -95,16 +95,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: "
-set $ws2 "2: "
-set $ws3 "3: "
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9: "
-set $ws10 "10: 𝄞"
+set $ws1 1: 
+set $ws2 2: 
+set $ws3 3: 
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+set $ws9 9: 
+set $ws10 10: 𝄞
 
 # switch to workspace
 bindsym $mod+1      workspace $ws1
@@ -176,26 +176,27 @@ bindsym $mod+r mode "resize"
 
 ## Colors
 
-set $foc_bord "#4c7899"
-set $foc_bg   "#285577"
-set $foc_text "#ffffff"
-set $foc_ind  "#2e9ef4"
+set $foc_bord #4c7899
+set $foc_bg   #285577
+set $foc_text #ffffff
+set $foc_ind  #2e9ef4
 set $foc_cb   $foc_bg
 
-set $fIn_bg   "#5f676a"
-set $fIn_ind  "#484e50"
+set $fIn_bg   #5f676a
+set $fIn_ind  #484e50
 set $fIn_cb   $fIn_bg
 
-set $ina_bord "#333333"
-set $ina_bg   "#222222"
-set $ina_text "#888888"
-set $ina_ind  "#292d2e"
+set $ina_bord #333333
+set $ina_bg   #222222
+set $ina_text #888888
+set $ina_ind  #292d2e
 set $ina_cb   $ina_bg
 
-set $urg_bord "#2f343a"
-set $urg_bg   "#900000"
+set $urg_bord #2f343a
+set $urg_bg   #900000
+set $urg_ind  #900000
 
-set $dark_ph  "#0c0c0c"
+set $dark_ph  #0c0c0c
 
 # client.focused
 #     A client which currently has the focus.
@@ -206,25 +207,13 @@ set $dark_ph  "#0c0c0c"
 #     A client which is not the focused one of its container.
 # client.urgent
 #     A client which has its urgency hint activated.
-# client.placeholder
-#     Background and text color are used to draw placeholder
-#     window contents (when restoring layouts).
-#     Border and indicator are ignored.
-# client.background
-#     Background color which will be used to paint the
-#     background of the client window on top of which the
-#     client will be rendered. Only clients which do not
-#     cover the whole area of this window expose the color.
-#     Note that this colorclass only takes a single color.
 
 # class                 border    backgr.  text      indicator  child_border
 client.focused          $foc_bord $foc_bg  $foc_text $foc_ind   $foc_cb
 client.focused_inactive $ina_bord $fIn_bg  $foc_text $fIn_ind   $fIn_cb
 client.unfocused        $ina_bord $ina_bg  $ina_text $ina_ind   $ina_cb
 client.urgent           $urg_bord $urg_bg  $foc_text $urg_ind   $urg_bg
-client.placeholder      $ina_bord $dark_ph $foc_text $ina_bord  $dark_ph
 
-client.background       $foc_text
 
 
 
@@ -257,16 +246,14 @@ bindsym $mod+Delete mode "$mode_system"
 
 assign [class="konversation"] $ws3
 assign [class="Firefox"] $ws1
-assign [class="Amarok"] $ws10
-assign [class="Clementine"] $ws10
 assign [class="KeePass2"] $ws9
 
 # Launching programs
-# exec  nm-applet
-# exec  owncloud
-# exec  start-pulseaudio-x11
-exec keepass
-exec konversation
+# exec nm-applet
+# exec owncloud
+# exec start-pulseaudio-x11
+# exec keepass
+# exec konversation
 # exec firefox
 # exec amarok
 
