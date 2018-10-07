@@ -1,7 +1,7 @@
 # Launching programs {{{1
     exec redshift -m wayland
-    #exec nm-applet
-    #exec owncloud
+    exec nm-applet
+    exec owncloud
     #exec start-pulseaudio-x11
     #exec keepass
     #exec konversation
