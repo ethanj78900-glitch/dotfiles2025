@@ -27,6 +27,7 @@ all: editors \
     conky \
     hack-fonts \
     git \
+    mpd \
     scripts
 
 editors: vim emacs kakoune
@@ -217,6 +218,12 @@ git:
 	stow -S git -t ${HOME}
 	@
 
+mpd:
+	@echo "************* mpd setup **************"
+	mkdir -p ${HOME}/.config
+	stow -S mpd -t ${HOME}
+	@
+
 scripts:
 	@echo "*********** scripts setup ************"
 	mkdir -p ${HOME}/.local
@@ -249,4 +256,5 @@ scripts:
     conky \
     hack-fonts \
     git \
+    mpd \
     scripts
