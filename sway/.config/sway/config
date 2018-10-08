@@ -6,7 +6,7 @@
     # font pango:DejaVu Sans Mono 8
 
     # set $menu dmenu_path | dmenu | xargs swaymsg exec
-    set $menu rofi -combi-modi window,drun -show combi -modi combi | xargs swaymsg exec
+    set $menu rofi -combi-modi "window,drun" -modi "combi" -show combi | xargs swaymsg exec
     set $locker ~/.config/sway/scripts/lock-laptop.sh && sleep 1
 
     output * bg /home/gagbo/Images/wallpapers/rukawa_slam_dunk_by_jmsedwrd.jpg fill
