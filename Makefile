@@ -9,6 +9,7 @@ all: editors \
     i3status \
     i3 \
     sway \
+    rofi \
     redshift \
     kvantum \
     openbox \
@@ -100,10 +101,16 @@ i3: i3blocks i3status
 	stow -S i3 -t ${HOME}
 	@echo ""
 
-sway: i3status
+sway: i3status rofi
 	@echo "************* sway setup  *************"
 	mkdir -p ${HOME}/.config
 	stow -S sway -t ${HOME}
+	@echo ""
+
+rofi:
+	@echo "************* rofi setup  *************"
+	mkdir -p ${HOME}/.config
+	stow -S rofi -t ${HOME}
 	@echo ""
 
 redshift:
@@ -223,6 +230,7 @@ scripts:
     i3status \
     i3 \
     sway \
+    rofi \
     redshift \
     kvantum \
     openbox \
