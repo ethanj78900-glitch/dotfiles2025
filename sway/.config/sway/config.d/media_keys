@@ -1,0 +1,10 @@
+# Volume {{{1
+    set $vol_increment 5%
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -$vol_increment
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-mute 0 0 && pactl set-sink-volume 0 +$vol_increment
+    bindsym XF86AudioMute        exec pactl set-sink-mute 0 toggle
+
+# Brightness {{{1
+    set $bright_increment 5%
+    bindsym XF86MonBrightnessDown exec brightnessctl -d intel_backlight set $bright_increment-
+    bindsym XF86MonBrightnessUp   exec brightnessctl -d intel_backlight set $bright_increment+
