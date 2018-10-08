@@ -9,7 +9,7 @@
 general {
     colors = true
         color_good = "#00e6ac" #"#33cc3"    #"#F08D0C"
-        interval = 5
+        interval = 1
         markup="pango"
 }
 #pink                     #ff80bf               #fa4c7e
@@ -63,7 +63,7 @@ battery all {
 tztime local {
 # format = "%Y-%m-%d %H:%M:%S"
     format = "<span color='#ffc125'>%time</span>"
-        format_time = "  %I:%M %p |  %a %d %b %Y %Z"
+        format_time = "  %H:%M:%S |  %a %d %b %Y %Z"
         locale = "fr_FR.UTF-8"
 }
 
