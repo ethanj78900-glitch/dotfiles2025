@@ -208,6 +208,7 @@
         position top
         status_command i3status
         separator_symbol "|"
+        # tray_output primary
     }
 
 # Shutdown/Logout menu {{{1
