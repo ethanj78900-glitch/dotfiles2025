@@ -35,26 +35,17 @@ markup=none
 # The first parameter sets the step (and units to display)
 # The second parameter overrides the mixer selection
 # See the script for details.
-[volume]
+# [volume]
 # label=VOL
-label=♪
-instance=Master
+# label=♪
+# instance=Master
 #instance=PCM
-interval=once
-signal=10
-
-# [volume-pulseaudio]
-# command=volume-pulseaudio -F 3 -a -H "墳 " -M "奔 " -L "奄 " -X "婢 " -C fdf6e3
 # interval=once
 # signal=10
 
-# Memory usage
-#
-# The type defaults to "mem" if the instance is not specified.
-# [memory]
-# label=
-# separator=false
-# interval=30
+[volume-pulseaudio]
+interval=once
+signal=10
 
 # Disk usage
 #
@@ -75,6 +66,10 @@ interval=30
 color=#00FF00
 interval=10
 separator=false
+
+[essid]
+interval=30
+#INTERFACE=wlp4s0
 
 [wifi]
 label=

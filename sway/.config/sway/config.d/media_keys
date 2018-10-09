@@ -1,8 +1,8 @@
 # Volume {{{1
     set $vol_increment 5%
-    bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -$vol_increment
-    bindsym XF86AudioRaiseVolume exec pactl set-sink-mute 0 0 && pactl set-sink-volume 0 +$vol_increment
-    bindsym XF86AudioMute        exec pactl set-sink-mute 0 toggle
+    bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master $vol_increment- && pkill -RTMIN+10 i3blocks
+    bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master $vol_increment+ && pkill -RTMIN+10 i3blocks
+    bindsym XF86AudioMute        exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
 
 # Brightness {{{1
     set $bright_increment 5%
