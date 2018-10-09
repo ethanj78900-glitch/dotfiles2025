@@ -82,8 +82,8 @@ instance=wlp4s0
 interval=10
 separator=false
 
-[bandwidth]
-interval=5
+# [bandwidth]
+# interval=5
 
 # CPU usage
 #
