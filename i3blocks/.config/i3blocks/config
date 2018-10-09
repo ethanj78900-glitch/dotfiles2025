@@ -42,6 +42,11 @@ markup=none
 #instance=PCM
 # interval=once
 # signal=10
+[mediaplayer-git]
+# label=
+instance=mpd
+interval=5
+signal=10
 
 [volume-pulseaudio]
 interval=once
