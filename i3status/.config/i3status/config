@@ -7,7 +7,8 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-    colors = true
+        output_format = "i3bar"
+        colors = true
         color_good = "#00e6ac" #"#33cc3"    #"#F08D0C"
         interval = 1
         markup="pango"

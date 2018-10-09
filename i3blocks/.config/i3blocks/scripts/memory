@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/sh
 # Copyright (C) 2014 Julien Bonjean <julien@bonjean.info>
 
 # This program is free software: you can redistribute it and/or modify
@@ -14,21 +14,36 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-load="$(cut -d ' ' -f1 /proc/loadavg)"
-cpus="$(nproc)"
+TYPE="${BLOCK_INSTANCE:-mem}"
 
-# full text
-echo "$load"
+awk -v type=$TYPE '
+/^MemTotal:/ {
+	mem_total=$2
+}
+/^MemFree:/ {
+	mem_free=$2
+}
+/^Buffers:/ {
+	mem_free+=$2
+}
+/^Cached:/ {
+	mem_free+=$2
+}
+/^SwapTotal:/ {
+	swap_total=$2
+}
+/^SwapFree:/ {
+	swap_free=$2
+}
+END {
+	# full text
+	if (type == "swap")
+		printf("%.1fG\n", (swap_total-swap_free)/1024/1024)
+	else
+		printf("%.1fG\n", mem_free/1024/1024)
 
-# short text
-echo "$load"
+	# TODO: short text
 
-# color if load is too high
-awk -v cpus=$cpus -v cpuload=$load '
-    BEGIN {
-        if (cpus <= cpuload) {
-            print "#FF0000";
-            exit 33;
-        }
-    }
-'
+	# TODO: color (if less than X%)
+}
+' /proc/meminfo
