@@ -1,10 +1,12 @@
 configuration {
         modi: "window,run,ssh,combi";
         combi-modi: "window,drun";
+        font: "Hack 12";
+        terminal: "kitty";
+
 /*      width: 50;*/
 /*      lines: 15;*/
 /*      columns: 1;*/
-        font: "Hack 12";
 /*      bw: 1;*/
 /*      location: 0;*/
 /*      padding: 5;*/
@@ -12,7 +14,6 @@ configuration {
 /*      xoffset: 0;*/
 /*      fixed-num-lines: true;*/
 /*      show-icons: false;*/
-        terminal: "kitty";
 /*      ssh-client: "ssh";*/
 /*      ssh-command: "{terminal} -e {ssh-client} {host}";*/
 /*      run-command: "{cmd}";*/
@@ -30,7 +31,6 @@ configuration {
 /*      auto-select: false;*/
 /*      parse-hosts: false;*/
 /*      parse-known-hosts: true;*/
-/*      combi-modi: "window,run";*/
 /*      matching: "normal";*/
 /*      tokenize: true;*/
 /*      m: "-5";*/
