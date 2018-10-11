@@ -28,6 +28,7 @@ all: editors \
     hack-fonts \
     git \
     mpd \
+    ncmpcpp \
     scripts
 
 editors: vim emacs kakoune
@@ -224,6 +225,12 @@ mpd:
 	stow -S mpd -t ${HOME}
 	@
 
+ncmpcpp:
+	@echo "*********** ncmpcpp setup ************"
+	mkdir -p ${HOME}/.config
+	stow -S ncmpcpp -t ${HOME}
+	@
+
 scripts:
 	@echo "*********** scripts setup ************"
 	mkdir -p ${HOME}/.local
@@ -257,4 +264,5 @@ scripts:
     hack-fonts \
     git \
     mpd \
+    ncmpcpp \
     scripts
