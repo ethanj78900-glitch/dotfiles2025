@@ -5,6 +5,8 @@ robbyrussell/oh-my-zsh folder:plugins/pip
 robbyrussell/oh-my-zsh folder:plugins/tmux
 zsh-users/zsh-completions
 
+esc/conda-zsh-completion
+
 
 # Prompt theme
 robbyrussell/oh-my-zsh folder:plugins/git-prompt
