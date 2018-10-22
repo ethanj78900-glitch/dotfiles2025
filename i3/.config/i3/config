@@ -256,34 +256,8 @@ mode "$mode_system" {
 
 bindsym $mod+Delete mode "$mode_system"
 
-## Plasma Integration
-# Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
-exec --no-startup-id wmctrl -c Plasma
-for_window [title="Bureau — Plasma"] kill; floating enable; border none
-
-## Avoid tiling popups, dropdown windows from plasma
-# for the first time, manually resize them, i3 will remember the setting for floating windows
-for_window [class="plasmashell"] floating enable;
-for_window [class="Plasma"] floating enable; border none
-for_window [title="plasma-desktop"] floating enable; border none
-for_window [title="win7"] floating enable; border none
-for_window [class="krunner"] floating enable; border none
-for_window [class="Kmix"] floating enable; border none
-for_window [class="Klipper"] floating enable; border none
-for_window [class="Plasmoidviewer"] floating enable; border none
-
-assign [class="konversation"] $ws3
-assign [class="Firefox"] $ws1
-assign [class="Amarok"] $ws10
-assign [class="Clementine"] $ws10
-assign [class="KeePass2"] $ws9
-
 # Launching programs
 exec_always feh --bg-scale /home/gagbo/Pictures/Y5Sd2Yj-slam-dunk-anime-wallpaper.jpg
 # exec --no-startup-id nm-applet
 # exec --no-startup-id owncloud
 # exec --no-startup-id start-pulseaudio-x11
-exec keepass
-exec konversation
-# exec firefox
-exec amarok
