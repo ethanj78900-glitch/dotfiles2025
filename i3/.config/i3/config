@@ -26,6 +26,9 @@ font pango:Noto Sans 10
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
+# Set wallpaper
+exec_always feh --bg-scale /home/gagbo/Pictures/Y5Sd2Yj-slam-dunk-anime-wallpaper.jpg
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -257,7 +260,6 @@ mode "$mode_system" {
 bindsym $mod+Delete mode "$mode_system"
 
 # Launching programs
-exec_always feh --bg-scale /home/gagbo/Pictures/Y5Sd2Yj-slam-dunk-anime-wallpaper.jpg
 # exec --no-startup-id nm-applet
 # exec --no-startup-id owncloud
 # exec --no-startup-id start-pulseaudio-x11
