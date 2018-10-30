@@ -16,7 +16,7 @@
     bindsym $mod+Shift+c reload
     # restart sway inplace (preserves your layout/session, can be used to upgrade sway)
     bindsym $mod+Shift+r restart
-    # exit sway (logs you out of your X session)
+    # exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec "swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'"
 
 # Basic commands {{{1
