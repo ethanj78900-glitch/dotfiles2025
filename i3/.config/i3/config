@@ -25,7 +25,7 @@
 
 # Basic commands{{{1
     # Use Mouse+$mod to drag floating windows to their wanted position
-    floating_modifier $mod normal
+    floating_modifier $mod
 
     # start a terminal
     # bindsym $mod+Return exec i3-sensible-terminal
@@ -187,6 +187,7 @@
 
     set $urg_bord #2f343a
     set $urg_bg   #900000
+    set $urg_bg   #000000
 
     set $dark_ph  #0c0c0c
 
@@ -245,9 +246,22 @@
 
     bindsym $mod+Delete mode "$mode_system"
 
+# Volume {{{1
+    set $vol_increment 5%
+    bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master $vol_increment- && pkill -RTMIN+10 i3blocks
+    bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master $vol_increment+ && pkill -RTMIN+10 i3blocks
+    bindsym XF86AudioMute        exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
+
+# Brightness {{{1
+    set $bright_increment 5%
+    bindsym XF86MonBrightnessDown exec brightnessctl -d intel_backlight set $bright_increment-
+    bindsym XF86MonBrightnessUp   exec brightnessctl -d intel_backlight set $bright_increment+
+
 # Assign specific applications to workspaces {{{1
     assign [class="KeePass2"] $ws9
 
-# Including the other stuff {{{1
-    include @sysconfdir@/i3/config.d/*
-    include ~/.config/i3/config.d/*
+# Launching programs {{{1
+    exec --no-startup-id redshift
+    exec --no-startup-id nm-applet
+    exec --no-startup-id owncloud
+    exec --no-startup-id start-pulseaudio-x11
