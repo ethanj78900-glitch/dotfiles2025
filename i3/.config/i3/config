@@ -220,12 +220,13 @@
     client.background       $foc_text
 
 # Bar {{{1
-    bar {
-        font pango:Noto Sans 10
-        status_command i3blocks
-        position top
-        separator_symbol "|"
-    }
+    # bar {
+    #     font pango:Noto Sans 10
+    #     status_command i3blocks
+    #     position top
+    #     separator_symbol "|"
+    # }
+    exec_always --no-startup-id ${HOME}/.config/polybar/launch.sh
 
 # Shutdown / Logout menu {{{1
     set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
