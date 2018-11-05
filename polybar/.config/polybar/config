@@ -56,8 +56,8 @@ font-1 = unifont:fontformat=truetype:size=10:antialias=false;0
 font-2 = FontAwesome:style=Regular:pixelsize=11
 
 modules-left = i3 xkeyboard
-modules-center = xwindow mpd
-modules-right = filesystem xbacklight pulseaudio memory cpu wlan eth battery date 
+modules-center = xwindow mpd pulseaudio
+modules-right = filesystem temperature cpu memory wlan eth battery date
 
 tray-position = right
 tray-padding = 1
@@ -108,7 +108,7 @@ interval = 25
 mount-0 = /
 mount-1 = /home
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %free%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -242,13 +242,14 @@ interval = 3.0
 
 format-connected = <ramp-signal><label-connected>
 ; format-connected-prefix = " "
+; format-connected = <label-connected>
 format-connected-underline = #9f78e1
 
 # The text
 label-connected = %essid% %upspeed% %downspeed%
 label-font = 3
 label-connected-background = ${colors.background}
-label-connected-padding = 3
+label-connected-padding = 0
 
 ramp-signal-0 = 
 ramp-signal-1 = 
@@ -256,7 +257,7 @@ ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
 ramp-signal-5 = 
-ramp-signal-padding = 3
+ramp-signal-padding = 1
 ramp-signal-foreground = ${colors.foreground-alt}
 ramp-signal-background = ${colors.background-alt}
 
@@ -286,10 +287,10 @@ format-disconnected =
 type = internal/date
 interval = 1
 
-date = " %d "
+date = " %a %d "
 date-alt = " %Y-%m-%d "
-time =  %H:%M
-time-alt =  %H:%M:%S
+time =  %T
+time-alt =  %R
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
@@ -361,10 +362,10 @@ battery = BAT0
 adapter = AC
 full-at = 98
 
-format-charging = <label-charging>
+format-charging = <animation-charging> <label-charging>
 format-charging-underline = #ffb52a
 
-format-discharging = <label-discharging>
+format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix =
