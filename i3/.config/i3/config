@@ -10,7 +10,7 @@
     # font pango:DejaVu Sans Mono 8
 
     # set $menu dmenu_path | dmenu | xargs swaymsg exec
-    set $menu rofi -combi-modi "window,drun" -modi "combi" -show combi | xargs i3-msg exec
+    set $menu "rofi -combi-modi 'window,drun' -modi 'combi' -show combi | xargs i3-msg exec"
     set $locker ~/.config/i3/scripts/lock-laptop.sh && sleep 1
 
     exec_always feh --bg-scale /home/gagbo/Images/wallpapers/rukawa_slam_dunk_by_jmsedwrd.jpg
