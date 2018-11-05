@@ -51,13 +51,13 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = Noto Sans:size=11;1
-font-1 = unifont:fontformat=truetype:size=10:antialias=false;0
+font-0 = Cantarell:style=Regular:size=11;1
+font-1 = Unifont:size=10:style=Medium;0
 font-2 = FontAwesome:style=Regular:pixelsize=11
 
 modules-left = i3 xkeyboard
-modules-center = xwindow mpd pulseaudio
-modules-right = filesystem temperature cpu memory wlan eth battery date
+modules-center = mpd pulseaudio info-redshift-temp
+modules-right = filesystem temperature cpu memory wlan eth battery-combined-shell date
 
 tray-position = right
 tray-padding = 1
@@ -105,8 +105,8 @@ label-indicator-underline = ${colors.secondary}
 type = internal/fs
 interval = 25
 
-mount-0 = /
-mount-1 = /home
+mount-0 = /home
+; mount-1 = /
 
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %free%
 label-unmounted = %mountpoint% not mounted
@@ -188,13 +188,20 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 type = internal/mpd
 format-online = <icon-prev> <icon-stop> <toggle> <label-song> <icon-next>
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+icon-play = ⏵
+icon-pause = ⏸
+icon-stop = ⏹
+icon-prev = ⏮
+icon-next = ⏭
+icon-seekb = ⏪
+icon-seekf = ⏩
+icon-random = 🔀
+icon-repeat = 🔁
+icon-repeatone = 🔂
+icon-single = 🔂
+icon-consume = ✀
 
-label-song-maxlen = 25
+label-song-maxlen = 50
 label-song-ellipsis = true
 
 [module/xbacklight]
@@ -247,10 +254,11 @@ format-connected-underline = #9f78e1
 
 # The text
 label-connected = %essid% %upspeed% %downspeed%
-label-font = 3
+label-font = 1
 label-connected-background = ${colors.background}
 label-connected-padding = 0
 
+ramp-signal-font = 2
 ramp-signal-0 = 
 ramp-signal-1 = 
 ramp-signal-2 = 
@@ -437,10 +445,17 @@ menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
-[module/batinfo]
+[module/battery-combined-shell]
 type = custom/script
-interval = 60
-exec = ~/programming/battery-combined-tlp.sh
+exec = ~/.config/polybar/scripts/battery-combined-shell.sh
+interval = 10
+format-underline = #ffb52a
+label-font = 3
+
+[module/battery-combined-tlp]
+type = custom/script
+exec = ~/.config/polybar/scripts/battery-combined-tlp.sh
+interval = 10
 label = %output:1%%
 format-underline = #ffb52a
 
@@ -468,5 +483,11 @@ click-left = task "$((`cat /tmp/tw_polybar_id`))" done
 [global/wm]
 margin-top = 5
 margin-bottom = 5
+
+[module/info-redshift-temp]
+type = custom/script
+exec = ~/.config/polybar/scripts/info-redshift-temp.sh
+interval = 5
+label-font = 3
 
 ; vim:ft=dosini
