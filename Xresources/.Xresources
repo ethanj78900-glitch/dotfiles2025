@@ -32,7 +32,7 @@ URxvt*scrollBar_right:  false
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!! Emacs settings !!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-Emacs.menuBar:                       off
+Emacs.menuBar:                       on
 Emacs.toolBar:                       off
 Emacs.verticalScrollBars:            off
 Emacs.background:                    #222222
@@ -44,4 +44,4 @@ Emacs.mode-line.attributeBox:        (:line-width 1 :color "#073642")
 !!!!!!!! Colorschemes !!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-#include ".themes/Xresources/spacegray.theme"
+#include ".themes/Xresources/sourcerer.theme"
