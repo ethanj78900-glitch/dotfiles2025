@@ -26,6 +26,7 @@ all: editors \
     latte \
     conky \
     hack-fonts \
+    weather-icons \
     git \
     mpd \
     ncmpcpp \
@@ -213,6 +214,15 @@ hack-fonts:
 	stow  -R hack-fonts -t ${HOME}
 	@echo ""
 
+weather-icons:
+	@echo "******** Weather icons setup *********"
+	mkdir -p ${HOME}/.local/share/fonts/ttf
+	stow  --no-folding -S weather-icons -t ${HOME}
+	@echo "Rebuild font-cache"
+	fc-cache -f -v
+	stow  -R weather-icons -t ${HOME}
+	@echo ""
+
 git:
 	@echo "************* git setup **************"
 	mkdir -p ${HOME}/.config
@@ -262,6 +272,7 @@ scripts:
     latte \
     conky \
     hack-fonts \
+    weather-icons \
     git \
     mpd \
     ncmpcpp \
