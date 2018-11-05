@@ -1,4 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+set -eo pipefail
+
 # Battery status (systray)
 AC=$(</sys/class/power_supply/ACAD/online)
 

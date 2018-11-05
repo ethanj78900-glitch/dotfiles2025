@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-icon="$HOME/Pictures/lock.png"
+set -eo pipefail
+
+icon="$HOME/Images/lock.png"
 tmpbg='/tmp/screen.png'
 
 (( $# )) && { icon=$1; }
