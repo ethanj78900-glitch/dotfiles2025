@@ -54,6 +54,7 @@ module-margin-right = 1
 font-0 = Cantarell:style=Regular:size=11;1
 font-1 = Unifont:size=10:style=Medium;0
 font-2 = FontAwesome:style=Regular:pixelsize=11
+font-3 = Weather Icons:size=12;1
 
 modules-left = i3 xkeyboard
 modules-center = mpd pulseaudio info-redshift-temp
@@ -489,5 +490,11 @@ type = custom/script
 exec = ~/.config/polybar/scripts/info-redshift-temp.sh
 interval = 5
 label-font = 3
+
+[module/openweathermap-fullfeatured]
+type = custom/script
+exec = ~/.config/polybar/scripts/openweathermap-fullfeatured.sh
+interval = 600
+label-font = 4
 
 ; vim:ft=dosini
