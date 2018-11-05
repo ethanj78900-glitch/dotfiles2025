@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -eo pipefail
+
 icon="$HOME/Pictures/lock.png"
 tmpbg='/tmp/screen.png'
 
