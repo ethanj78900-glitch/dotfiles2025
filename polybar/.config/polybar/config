@@ -62,8 +62,8 @@ modules-right = filesystem temperature cpu memory wlan eth battery-combined-shel
 
 tray-position = right
 tray-padding = 1
-#tray-transparent = true
-tray-background = #222222
+tray-transparent = true
+tray-background = #aa222222
 
 ;wm-restack = bspwm
 ; wm-restack = i3
