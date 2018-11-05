@@ -173,20 +173,20 @@
     set $foc_bg   #285577
     set $foc_text #ffffff
     set $foc_ind  #2e9ef4
-    set $foc_cb   $foc_bg
+    set $foc_cb   #285577
 
     set $fIn_bg   #5f676a
     set $fIn_ind  #484e50
-    set $fIn_cb   $fIn_bg
+    set $fIn_cb   #5f676a
 
     set $ina_bord #333333
     set $ina_bg   #222222
     set $ina_text #888888
     set $ina_ind  #292d2e
-    set $ina_cb   $ina_bg
+    set $ina_cb   #222222
 
     set $urg_bord #2f343a
-    set $urg_bg   #900000
+    set $urg_ind  #900000
     set $urg_bg   #000000
 
     set $dark_ph  #0c0c0c
