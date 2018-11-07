@@ -54,3 +54,7 @@ export PETSC_ARCH="linux-gnu-cpp"
 PATH="${PATH}:${CIMLIB_HOME}/build/bin"
 export CEMEF_NICK="gerry.agbobada"
 export CEMEF_HOST="maine"
+
+if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+    exec startx ~/.xinitrc i3
+fi

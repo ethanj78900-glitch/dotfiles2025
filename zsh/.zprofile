@@ -4,5 +4,5 @@ if [ -f ~/.zshrc ]; then
 fi
 
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
-    exec startx
+    exec startx ~/.xinitrc i3
 fi
