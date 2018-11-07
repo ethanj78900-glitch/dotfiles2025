@@ -2,6 +2,11 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+# Pre-init {{{1
+# TODO : these commands have no effect here. They must be moved in a good file
+    exec_always --no-startup-id "xkb-switch -s us(altgr-oss)"
+    exec_always --no-startup-id QT_QPA_PLATFORMTHEME='qt5ct'
+
 # Init {{{1
     set $mod Mod4
 
@@ -14,9 +19,8 @@
     set $locker ~/.config/i3/scripts/lock-laptop.sh && sleep 1
     set $term kitty
 
-    exec QT_QPA_PLATFORMTHEME='qt5ct'
-    exec_always compton -cb
-    exec_always feh --bg-scale /home/gagbo/Images/wallpapers/rukawa_slam_dunk_by_jmsedwrd.jpg
+    exec_always --no-startup-id compton -cb
+    exec_always --no-startup-id feh --bg-scale /home/gagbo/Images/wallpapers/rukawa_slam_dunk_by_jmsedwrd.jpg
 
 # Sway session control {{{1
     # reload the configuration file
@@ -75,7 +79,7 @@
     bindsym $mod+a focus parent
 
     # focus the child container
-    bindsym $mod+d focus child
+    bindsym $mod+z focus child
 
 # Layout {{{1
     # split in horizontal orientation
@@ -263,8 +267,9 @@
 # Assign specific applications to workspaces {{{1
     assign [class="KeePass2"] $ws9
 
-# KDE theming {{{1
-    exec_always ${HOME}/.config/i3/scripts/setup_qt5ct.sh
+# Floating windows {{{1
+    for_window [class="Matplotlib"] floating enable
+    for_window [class="ParaView"] floating enable
 
 # Launching programs {{{1
     exec --no-startup-id redshift
