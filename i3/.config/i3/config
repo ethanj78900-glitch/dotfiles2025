@@ -4,7 +4,7 @@
 
 # Pre-init {{{1
 # TODO : these commands have no effect here. They must be moved in a good file
-    exec_always --no-startup-id "xkb-switch -s us(altgr-oss)"
+    exec_always --no-startup-id "xkb-switch -s us(altgr-intl)"
     exec_always --no-startup-id QT_QPA_PLATFORMTHEME='qt5ct'
 
 # Init {{{1
