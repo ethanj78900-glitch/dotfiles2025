@@ -233,8 +233,8 @@
 
 # Assign specific applications to workspaces {{{1
     assign [class="konversation"] $ws3
-    assign [class="Firefox"] $ws1
     assign [class="KeePass2"] $ws9
+    assign [class="Simplenote"] $ws5
 
 # Including the other stuff {{{1
     include @sysconfdir@/sway/config.d/*
