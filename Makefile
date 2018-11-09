@@ -13,6 +13,7 @@ all: editors \
     redshift \
     kvantum \
     openbox \
+    tint2 \
     polybar \
     kitty \
     ctags \
@@ -128,13 +129,19 @@ kvantum:
 	stow -S kvantum -t ${HOME}
 	@echo ""
 
-openbox:
+openbox: tint2
 	@echo "************ openbox setup ************"
 	mkdir -p ${HOME}/.config
 	stow -S openbox -t ${HOME}
 	@echo ""
 
-polybar:
+tint2:
+	@echo "************ tint2 setup ************"
+	mkdir -p ${HOME}/.config
+	stow -S tint2 -t ${HOME}
+	@echo ""
+
+polybar: tint2
 	@echo "************ polybar setup ************"
 	mkdir -p ${HOME}/.config
 	stow -S polybar -t ${HOME}
@@ -258,6 +265,7 @@ scripts:
     redshift \
     kvantum \
     openbox \
+    tint2 \
     polybar \
     kitty \
     ctags \
