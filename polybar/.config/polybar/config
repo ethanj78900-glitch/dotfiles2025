@@ -60,7 +60,7 @@ modules-left = i3 xkeyboard
 modules-center = openweathermap-fullfeatured mpd pulseaudio info-redshift-temp
 modules-right = filesystem temperature cpu memory wlan eth battery-combined-shell date
 
-tray-position = right
+; tray-position = right
 tray-padding = 1
 tray-transparent = true
 tray-background = #aa222222
