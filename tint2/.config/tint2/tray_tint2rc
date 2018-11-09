@@ -5,7 +5,7 @@
 #-------------------------------------
 # Panel
 panel_items = FS
-panel_size = 100% 19
+panel_size = 100% 40
 panel_margin = 5 0
 panel_padding = 0 0 0
 panel_background_id = 0
