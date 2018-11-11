@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Update Antibody plugins
-alias abup='antibody bundle < ~/.zsh/plugins.txt > ~/.zsh_plugins.sh'
+alias abup='antibody bundle < ~/.zsh/plugins.txt > ~/.zsh_plugins.sh && antibody update'
 
 # Quick terminals
 alias ki='kitty'
