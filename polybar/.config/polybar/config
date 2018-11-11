@@ -337,8 +337,8 @@ format-disconnected =
 type = internal/date
 interval = 1
 
-date = "%a %d %b "
-date-alt = "%Y-%m-%d "
+date = "%A %d %B %Y "
+date-alt = "%f "
 time = %T
 time-alt = %R
 format-prefix = 
