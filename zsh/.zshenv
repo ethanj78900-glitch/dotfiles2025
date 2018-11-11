@@ -4,6 +4,8 @@ path=(~/soft/smlnj/bin $path[@])
 path=(~/.cargo/bin $path[@])
 path=(~/go/bin $path[@])
 path=(~/projects/OSSU/core_systems/ops-class/os161/tools/bin $path[@])
+path=(~/soft/android_tools/bin $path[@])
+path=(~/soft/android_tools $path[@])
 
 # User specific environment and startup programs
 export PI=$(echo "scale=20; 4*a(1)" | bc -l)
