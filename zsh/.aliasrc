@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Misc random
+alias starwars6='telnet -6 towel.blinkenlights.nl'
+alias starwars='telnet towel.blinkenlights.nl'
+
 # Update Antibody plugins
 alias abup='antibody bundle < ~/.zsh/plugins.txt > ~/.zsh_plugins.sh && antibody update'
 
