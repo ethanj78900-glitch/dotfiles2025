@@ -77,7 +77,7 @@ kakoune:
 
 plasma:
 	@echo "************ plasma setup  ************"
-	mkdir -p ${HOME}/.config
+	mkdir -p ${HOME}/.local/share/icons/hicolor
 	stow -S plasma -t ${HOME}
 	@echo ""
 
