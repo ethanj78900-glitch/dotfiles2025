@@ -27,7 +27,7 @@ sysxkbmap=/etc/X11/Xkbmap
 
 # merge in defaults
 [ -r "$sysresources" ] && xrdb -nocpp -merge "$sysresources"
-[ -r "$userresources" ] && xrdb -merge "$userresources"
+[ -r "$userresources" ] && xrdb -I$HOME -merge "$userresources"
 
 # merge in keymaps
 if [ -r "$sysxkbmap" ]; then
@@ -58,8 +58,6 @@ if [ -z "$SSH_AGENT" ] && [ -z "$SSH_AUTH_SOCK" ] && [ -z "$SSH_AGENT_PID" ] && 
     fi
 fi
 
-xrdb -I$HOME -merge ~/.Xresources
-
 # Here i3 is kept as default
 session=${1:-i3}
 
@@ -67,13 +65,13 @@ case $session in
     i3|i3wm           )
         xkb-switch -s us(altgr-intl)
         export QT_QPA_PLATFORMTHEME='qt5ct'
-        exec i3
+        exec $SSH_AGENT i3
         ;;
     kde               )
-        exec startkde
+        exec $SSH_AGENT startkde
         ;;
     xfce|xfce4        )
-        exec startxfce4
+        exec $SSH_AGENT startxfce4
         ;;
     # No known session, try to run it as command ;
     # useful for starting programs without WM
