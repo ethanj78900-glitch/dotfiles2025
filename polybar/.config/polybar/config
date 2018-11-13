@@ -108,8 +108,8 @@ font-1 = Unifont:size=10:style=Medium;0
 font-2 = FontAwesome:style=Regular:size=14
 font-3 = Weather Icons:size=14;1
 
-modules-left = xkeyboard
-modules-center = mpd pulseaudio info-redshift-temp
+modules-left = xkeyboard info-redshift-temp backlight-acpi
+modules-center = mpd pulseaudio
 modules-right = wlan eth
 
 ; tray-position = right
@@ -530,7 +530,6 @@ margin-bottom = 5
 type = custom/script
 exec = ~/.config/polybar/scripts/info-redshift-temp.sh
 interval = 5
-label-font = 3
 
 [module/openweathermap-fullfeatured]
 type = custom/script
