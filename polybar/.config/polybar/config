@@ -295,7 +295,7 @@ format-connected = <ramp-signal><label-connected>
 format-connected-underline = #9f78e1
 
 # The text
-label-connected = %essid% %upspeed% %downspeed%
+label-connected = %essid% ↑%upspeed% ↓%downspeed%
 label-font = 1
 label-connected-background = ${colors.background}
 label-connected-padding = 0
@@ -309,7 +309,7 @@ ramp-signal-4 = 
 ramp-signal-5 = 
 ramp-signal-padding = 1
 ramp-signal-foreground = ${colors.foreground-alt}
-ramp-signal-background = ${colors.background-alt}
+; ramp-signal-background = ${colors.background-alt}
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
