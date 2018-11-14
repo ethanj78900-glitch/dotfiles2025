@@ -492,7 +492,7 @@ type = custom/script
 exec = ~/.config/polybar/scripts/battery-combined-shell.sh
 interval = 10
 format-underline = #ffb52a
-label-font = 3
+label-font = 1
 
 [module/battery-combined-tlp]
 type = custom/script
