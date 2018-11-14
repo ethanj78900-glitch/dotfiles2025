@@ -63,7 +63,6 @@ session=${1:-i3}
 
 case $session in
     i3|i3wm           )
-        xkb-switch -s us(altgr-intl)
         export QT_QPA_PLATFORMTHEME='qt5ct'
         exec $SSH_AGENT i3
         ;;
