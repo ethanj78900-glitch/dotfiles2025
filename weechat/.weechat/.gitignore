@@ -1,0 +1,7 @@
+# Following advice of user manual here
+sec.conf
+irc.conf
+
+# Remove logs
+*.log
+logs/

@@ -20,6 +20,7 @@ all: editors \
     zsh \
     bash \
     Xresources \
+    weechat \
     tern \
     tmux \
     IdeaVim \
@@ -176,6 +177,12 @@ Xresources:
 	stow -S Xresources -t ${HOME}
 	@echo ""
 
+weechat:
+	@echo "***********  weechat setup  ***********"
+	mkdir -p ${HOME}
+	stow -S weechat -t ${HOME}
+	@echo ""
+
 tern:
 	@echo "************ Tern.js setup ************"
 	mkdir -p ${HOME}/.config
@@ -271,6 +278,7 @@ scripts:
     ctags \
     zsh \
     Xresources \
+    weechat \
     tern \
     vim \
     emacs \
