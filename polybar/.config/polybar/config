@@ -16,16 +16,23 @@
 ;
 ;==========================================================
 
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
 [colors]
 #background = ${xrdb:color0:#222}
-background = #aa000000
-background-alt = #000
+background = ${xrdb:background:#aa000000}
+background-alt = ${xrdb:color0:#000}
 ;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
-foreground-alt = #444
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+foreground = ${xrdb:foreground:#dfdfdf}
+foreground-alt = ${xrdb:colorBD:#444}
+primary = ${xrdb:color4:#ffb52a}
+secondary = ${xrdb:color3:#e60053}
+alert = ${xrdb:color1:#bd2c40}
 
 [bar/top]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -150,7 +157,7 @@ interval = 25
 mount-0 = /home
 mount-1 = /
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %free%
+label-mounted = %{F#6688aa}%mountpoint%%{F-}: %free%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -196,7 +203,7 @@ ws-icon-5 = 6
 ws-icon-default = 
 
 label-mode-padding = 2
-label-mode-foreground = #000
+label-mode-foreground = ${colors.background}
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
@@ -254,11 +261,11 @@ label =  %percentage%%
 
 bar-width = 7
 bar-indicator =
-bar-indicator-foreground = #fff
+bar-indicator-foreground = ${xrdb:foreground:#fff}
 bar-indicator-font = 2
 bar-fill = ─
 bar-fill-font = 2
-bar-fill-foreground = #9f78e1
+bar-fill-foreground = ${xrdb:color12:#9f78e1}
 bar-empty = ─
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
@@ -273,7 +280,7 @@ type = internal/cpu
 interval = 2
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-underline = ${xrdb:color13:#f90000}
 label = %percentage:2%%
 
 [module/memory]
@@ -281,7 +288,7 @@ type = internal/memory
 interval = 2
 format-prefix =
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
+format-underline = ${xrdb:color13:#4bffdc}
 label = %percentage_used:2%%
 
 [module/wlan]
@@ -292,7 +299,7 @@ interval = 3.0
 format-connected = <ramp-signal><label-connected>
 ; format-connected-prefix = " "
 ; format-connected = <label-connected>
-format-connected-underline = #9f78e1
+format-connected-underline = ${xrdb:color11:#9f78e1}
 
 # The text
 label-connected = %essid% ↑%upspeed% ↓%downspeed%
@@ -322,7 +329,7 @@ type = internal/network
 interface = enp0s31f6
 interval = 3.0
 
-format-connected-underline = #55aa55
+format-connected-underline = ${xrdb:color11:#55aa55}
 format-connected-prefix = ""
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip% ↑%upspeed% ↓%downspeed%
@@ -343,7 +350,6 @@ time = %T
 time-alt = %R
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
 
 label = %date%%time%
 
@@ -355,16 +361,19 @@ label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted =  muted
-label-muted-foreground = #666
+label-muted-foreground = ${xrdb:color7:#666}
 
-bar-volume-width = 7
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
+bar-volume-width = 10
+bar-volume-foreground-0 = ${xrdb:color2:#55aa55}
+bar-volume-foreground-1 = ${xrdb:color2:#55aa55}
+bar-volume-foreground-2 = ${xrdb:color2:#55aa55}
+bar-volume-foreground-3 = ${xrdb:color10:#55aa55}
+bar-volume-foreground-4 = ${xrdb:color10:#55aa55}
+bar-volume-foreground-5 = ${xrdb:color10:#f5a70a}
+bar-volume-foreground-6 = ${xrdb:color10:#ff5555}
+bar-volume-foreground-7 = ${xrdb:color10:#ff5555}
+bar-volume-foreground-8 = ${xrdb:color9:#ff5555}
+bar-volume-foreground-9 = ${xrdb:color9:#ff5555}
 bar-volume-gradient = false
 bar-volume-indicator = 
 bar-volume-indicator-font = 2
@@ -390,13 +399,16 @@ format-muted-foreground = ${colors.foreground-alt}
 label-muted = sound muted
 
 bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
+bar-volume-foreground-0 = ${xrdb:color2:#55aa55}
+bar-volume-foreground-1 = ${xrdb:color2:#55aa55}
+bar-volume-foreground-2 = ${xrdb:color2:#55aa55}
+bar-volume-foreground-3 = ${xrdb:color10:#55aa55}
+bar-volume-foreground-4 = ${xrdb:color10:#55aa55}
+bar-volume-foreground-5 = ${xrdb:color10:#f5a70a}
+bar-volume-foreground-6 = ${xrdb:color10:#ff5555}
+bar-volume-foreground-7 = ${xrdb:color10:#ff5555}
+bar-volume-foreground-8 = ${xrdb:color9:#ff5555}
+bar-volume-foreground-9 = ${xrdb:color9:#ff5555}
 bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
@@ -413,14 +425,14 @@ adapter = AC
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+format-charging-underline = ${xrdb:color6:#ffb52a}
 
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+format-discharging-underline = ${xrdb:color3:#ff9800}
 
 format-full-prefix =
 format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+format-full-underline = ${xrdb:color2:#719611}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -445,9 +457,9 @@ thermal-zone = 0
 warn-temperature = 60
 
 format = <ramp> <label>
-format-underline = #f50a4d
+format-underline = ${xrdb:color14:#f50a4d}
 format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
+format-warn-underline = ${colors.alert}
 
 label = %temperature-c%
 label-warn = %temperature-c%
@@ -491,7 +503,7 @@ menu-2-1-exec = menu-open-0
 type = custom/script
 exec = ~/.config/polybar/scripts/battery-combined-shell.sh
 interval = 10
-format-underline = #ffb52a
+format-underline = ${xrdb:color14:#ffb52a}
 label-font = 1
 
 [module/battery-combined-tlp]
@@ -499,28 +511,7 @@ type = custom/script
 exec = ~/.config/polybar/scripts/battery-combined-tlp.sh
 interval = 10
 label = %output:1%%
-format-underline = #ffb52a
-
-[module/mjd]
-type = custom/script
-exec = ~/programming/mjd
-label = %output%
-format-underline = #47f948
-[settings]
-screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-
-[module/taskwarrior]
-interval = 1 
-type = custom/script
-exec = ~/programming/task_polybar.sh
-format = " <label>"
-format-foreground = #FFF
-format-prefix =
-click-left = task "$((`cat /tmp/tw_polybar_id`))" done
+format-underline = ${xrdb:color14:#ffb52a}
 
 [global/wm]
 margin-top = 5
