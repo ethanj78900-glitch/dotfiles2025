@@ -3,6 +3,7 @@ configuration {
         combi-modi: "window,drun";
         font: "Hack 12";
         terminal: "kitty";
+        theme: "Arc-Dark";
 
 /*      width: 50;*/
 /*      lines: 15;*/
@@ -49,7 +50,6 @@ configuration {
 /*      window-format: "{w}    {i}{c}   {t}";*/
 /*      click-to-exit: true;*/
 /*      show-match: true;*/
-/*      theme: ;*/
 /*      color-normal: ;*/
 /*      color-urgent: ;*/
 /*      color-active: ;*/
