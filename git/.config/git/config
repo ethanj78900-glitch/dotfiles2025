@@ -9,7 +9,18 @@
     st = status
     br = branch
     ci = commit
+
+[core]
+    # This core.askPass is a fallback after the env var GIT_ASKPASS
+    askPass = ksshaskpass
+
 [url "git://anongit.kde.org/"]
 	insteadOf = kde:
 [url "git@git.kde.org:"]
 	pushInsteadOf = kde:
+
+[sendemail]
+    smtpEncryption = tls
+    smtpServer = smtp.gmail.com
+    smtpUser = gagbobada@gmail.com
+    smtpServerPort = 587
