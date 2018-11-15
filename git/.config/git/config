@@ -20,6 +20,7 @@
 	pushInsteadOf = kde:
 
 [sendemail]
+    annotate = yes
     smtpEncryption = tls
     smtpServer = smtp.gmail.com
     smtpUser = gagbobada@gmail.com
