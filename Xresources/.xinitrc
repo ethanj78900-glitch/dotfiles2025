@@ -60,7 +60,7 @@ fi
 
 # Setup GIT_ASKPASS env if not set from a sensible list
 if [ -z "$GIT_ASKPASS" ]; then
-    for askpass in "$GIT_ASKPASS" ksshaskpass ssh-askpass-gnome ssh-askpass; do
+    for askpass in "$GIT_ASKPASS" ksshaskpass ssh-askpass-gnome x11-ssh-askpass ssh-askpass; do
         if command -v "$askpass" > /dev/null 2>&1; then
             export GIT_ASKPASS="$askpass"
             break
