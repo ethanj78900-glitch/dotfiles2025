@@ -64,6 +64,8 @@ session=${1:-i3}
 case $session in
     i3|i3wm           )
         export QT_QPA_PLATFORMTHEME='qt5ct'
+        export GTK_THEME='Arc-Darker'
+        export GTK2_RC_FILES='${HOME}/.gtkrc-2.0'
         exec $SSH_AGENT i3
         ;;
     kde               )
