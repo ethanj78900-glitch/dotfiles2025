@@ -260,7 +260,6 @@
     bindsym XF86MonBrightnessUp   exec brightnessctl -d intel_backlight set $bright_increment+
 
 # Assign specific applications to workspaces {{{1
-    assign [class="konversation"] $ws3
     assign [class="KeePass2"] $ws9
     assign [class="Simplenote"] $ws5
 
