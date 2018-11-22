@@ -6,8 +6,9 @@
     # font pango:DejaVu Sans Mono 8
 
     # set $menu dmenu_path | dmenu | xargs swaymsg exec
-    set $menu rofi -combi-modi "window,drun" -modi "combi" -show combi | xargs swaymsg exec
+    set $menu "rofi -combi-modi 'window,drun' -modi 'combi' -show combi | xargs swaymsg exec"
     set $locker ~/.config/sway/scripts/lock-laptop.sh && sleep 1
+    set $term kitty
 
     output * bg /home/gagbo/Images/wallpapers/rukawa_slam_dunk_by_jmsedwrd.jpg fill
 
@@ -25,13 +26,13 @@
 
     # start a terminal
     # bindsym $mod+Return exec i3-sensible-terminal
-    bindsym $mod+Return exec kitty
+    bindsym $mod+Return exec $term
 
     # kill focused window
     bindsym $mod+Shift+q kill
 
     # start dmenu (a program launcher)
-    bindsym $mod+d exec $menu
+    bindsym $mod+d exec --no-startup-id $menu
 
     # lock the computer
     bindsym Control+$mod+l exec $locker
@@ -68,7 +69,7 @@
     bindsym $mod+a focus parent
 
     # focus the child container
-    #bindsym $mod+d focus child
+    bindsym $mod+z focus child
 
 # Layout {{{1
     # split in horizontal orientation
@@ -169,17 +170,17 @@
     set $foc_bg   #285577
     set $foc_text #ffffff
     set $foc_ind  #2e9ef4
-    set $foc_cb   $foc_bg
+    set $foc_cb   #285577
 
     set $fIn_bg   #5f676a
     set $fIn_ind  #484e50
-    set $fIn_cb   $fIn_bg
+    set $fIn_cb   #5f676a
 
     set $ina_bord #333333
     set $ina_bg   #222222
     set $ina_text #888888
     set $ina_ind  #292d2e
-    set $ina_cb   $ina_bg
+    set $ina_cb   #222222
 
     set $urg_bord #2f343a
     set $urg_bg   #900000
@@ -204,15 +205,16 @@
     client.urgent           $urg_bord $urg_bg  $foc_text $urg_ind   $urg_bg
 
 # Bar {{{1
-    bar {
-        font pango:Noto Sans 11
-        position top
-        # status_command i3status
-        # status_command ~/.config/sway/scripts/ncmpcpp_i3status.sh
-        status_command i3blocks
-        separator_symbol "|"
-        # tray_output all
-    }
+    # bar {
+    #     font pango:Noto Sans 11
+    #     position top
+    #     # status_command i3status
+    #     # status_command ~/.config/sway/scripts/ncmpcpp_i3status.sh
+    #     status_command i3blocks
+    #     separator_symbol "|"
+    #     # tray_output all
+    # }
+    exec_always --no-startup-id ${HOME}/.config/polybar/launch.sh
 
 # Shutdown/Logout menu {{{1
     set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
@@ -232,9 +234,12 @@
     bindsym $mod+Delete mode "$mode_system"
 
 # Assign specific applications to workspaces {{{1
-    assign [class="konversation"] $ws3
     assign [class="KeePass2"] $ws9
     assign [class="Simplenote"] $ws5
+
+# Floating windows {{{1
+    for_window [class="Matplotlib"] floating enable
+    for_window [class="ParaView"] floating enable
 
 # Including the other stuff {{{1
     include @sysconfdir@/sway/config.d/*

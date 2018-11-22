@@ -1,10 +1,7 @@
 # Launching programs {{{1
-    exec redshift -m wayland
-    exec nm-applet
-    exec owncloud
-    #exec start-pulseaudio-x11
+    exec --no-startup-id redshift -m wayland
+    exec --no-startup-id nm-applet
+    exec --no-startup-id owncloud
+    exec --no-startup-id start-pulseaudio-x11
     #exec keepass
-    #exec konversation
-    #exec firefox
-    #exec amarok
 
