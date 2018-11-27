@@ -4,6 +4,9 @@
 [submodule "openbox/.config/tint2/themes"]
 	path = tint2/.config/tint2/themes
 	url = https://github.com/addy-dclxvi/tint2-theme-collections
-[submodule "plasma/.icons/evolvere-icons-2"]
-	path = plasma/.local/share/icons/evolvere-icons-2
-	url = https://github.com/franksouza183/Evolvere-Icons
+[submodule "plasma"]
+	path = plasma
+	url = https://framagit.org/gagbo/plasma-config
+[submodule "kvantum"]
+	path = kvantum
+	url = https://framagit.org/gagbo/kvantum-config
