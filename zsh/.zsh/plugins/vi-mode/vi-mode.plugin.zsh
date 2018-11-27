@@ -35,13 +35,24 @@ bindkey '^r' history-incremental-search-backward
 bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
 
-# if mode indicator wasn't setup by theme, define default
-if [[ "$MODE_INDICATOR" == "" ]]; then
-  MODE_INDICATOR="%{$fg[red]%}|%{$fg_bold[red]%}NOR%{$fg[red]%}|%{$reset_color%}"
+# if mode indicators weren't setup by theme, define default
+if [[ "$NOR_INDICATOR" == "" ]]; then
+    NOR_INDICATOR="%{$fg[red]%}|%{$fg_bold[red]%}NOR%{$fg[red]%}|%{$reset_color%}"
+fi
+if [[ "$INS_INDICATOR" == "" ]]; then
+    INS_INDICATOR="%{$fg[blue]%}|%{$fg_bold[blue]%}INS%{$fg[blue]%}|%{$reset_color%}"
 fi
 
 function vi_mode_prompt_info() {
-  echo "${${KEYMAP/vicmd/$MODE_INDICATOR}/(main|viins)/}"
+    if [[ $KEYMAP =~ "vicmd" ]]; then
+        echo "$NOR_INDICATOR"
+        return 0
+    fi
+    if [[ $KEYMAP =~ "(main|viins)" ]]; then
+        echo "$INS_INDICATOR"
+        return 0
+    fi
+    echo "$KEYMAP"
 }
 
 # Prepend right prompt
