@@ -29,6 +29,7 @@ alias gl='git log --oneline --all --graph --decorate'
 
 # Misc magic
 alias loc='tokei'
+alias dr='disown -r'
 
 # Folder information
 alias lll='exa -laFhS'
