@@ -1,6 +1,5 @@
 VIM_SETUP_GIT = "git@framagit.org:gagbo/vim-setup.git"
 EMACS_SETUP_GIT = "git@framagit.org:gagbo/emacs-setup.git"
-KAK_SETUP_GIT = "git@framagit.org:gagbo/kak-setup.git"
 
 all: editors \
     plasma \
@@ -34,7 +33,7 @@ all: editors \
     ncmpcpp \
     scripts
 
-editors: vim emacs kakoune
+editors: vim emacs
 
 # Clone the repository
 # If this fails, the repo is probably already there : so just pull it
@@ -44,11 +43,9 @@ vim:
 	@mkdir -p nvim/.config
 	@echo "********** Vim/Neovim setup  **********"
 	@echo "Cloning the repo..."
-	@git clone ${VIM_SETUP_GIT} nvim/.config/nvim && cd nvim/.config/nvim\
-	    && git submodule init && git submodule update && cd ../../..\
-	    && stow -S nvim -t ${HOME} ||\
-	    cd ../../.. && echo "Could not clone vim repo. Maybe you just need to \
-	cd to ${PWD}/nvim/.config/nvim and git pull"
+	@git submodule init nvim/.config/nvim &&\
+	    git submodule update nvim/.config/nvim --recursive &&\
+	    stow -S nvim -t ${HOME} ||\
 	@echo "Now you need to run \"nvim -c PackUpdate\" and the vim version \
 	of this to get all the plugins"
 	@echo ""
@@ -59,26 +56,17 @@ vim:
 emacs:
 	@mkdir -p emacs
 	@echo "************* Emacs setup *************"
-	@echo "Cloning or the repo..."
-	@git clone ${EMACS_SETUP_GIT} emacs/.emacs.d && stow -S emacs -t ${HOME} ||\
-	    echo "Could not clone emacs repo. Maybe you just need to \
-	cd to ${PWD}/emacs/.emacs.d and git pull"
+	@git submodule init emacs/.emacs.d &&\
+	    git submodule update emacs/.emacs.d &&\
+	    stow -S emacs -t ${HOME}
 	@echo "You probably want to start emacs so that updates can go through"
-	@echo ""
-
-kakoune:
-	@mkdir -p kakoune/.config
-	@echo "************ kakoune setup  ************"
-	@echo "Cloning or the repo..."
-	@git clone ${KAK_SETUP_GIT} kakoune/.config/kak && stow -S kakoune -t ${HOME} ||\
-	    echo "Could not clone emacs repo. Maybe you just need to \
-	cd to ${PWD}/kakoune/.config/kak and git pull"
-	@echo "You probably want to start kakoune so that updates can go through"
 	@echo ""
 
 plasma:
 	@echo "************ plasma setup  ************"
 	mkdir -p ${HOME}/.local/share/icons/hicolor
+	@git submodule init plasma &&\
+	    git submodule update plasma --recursive
 	stow -S plasma -t ${HOME}
 	@echo ""
 
@@ -127,6 +115,8 @@ redshift:
 kvantum:
 	@echo "************ kvantum setup  ************"
 	mkdir -p ${HOME}/.config
+	@git submodule init kvantum &&\
+	    git submodule update kvantum --recursive
 	stow -S kvantum -t ${HOME}
 	@echo ""
 
