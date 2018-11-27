@@ -10,3 +10,9 @@
 [submodule "plasma"]
 	path = plasma
 	url = https://framagit.org/gagbo/plasma-config
+[submodule "nvim/.config/nvim"]
+	path = nvim/.config/nvim
+	url = https://framagit.org/gagbo/vim-setup
+[submodule "emacs/.emacs.d"]
+	path = emacs/.emacs.d
+	url = https://framagit.org/gagbo/emacs-setup
