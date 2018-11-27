@@ -46,8 +46,33 @@ zmodload zsh/mathfunc
 
 precmd() {}
 
+# local plugins
+# The plugins must either
+# - Be under $NAME/$NAME.plugin.zsh : in this case the plugin.zsh file is sourced
+# - Have function in $NAME : in this case the folder is added to fpath
+plugins=(
+    cargo
+    pip
+    tmux
+    history
+    git
+    git-prompt
+    colored-man-pages
+    vscode
+    vi-mode
+)
+for plugin in $plugins; do
+  if [[ -e "$HOME/.zsh/plugins/$plugin/$plugin.plugin.zsh" ]]; then
+      source "$HOME/.zsh/plugins/$plugin/$plugin.plugin.zsh"
+  else;
+      fpath=($HOME/.zsh/plugins/$plugin $fpath)
+  fi
+done
+
+# local libraries (functions files)
+source "$HOME/.zsh/lib/git.zsh"
+
 ######### Antibody #########
-export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
 source ~/.zsh_plugins.sh
 ######## End of Antibody ########
 

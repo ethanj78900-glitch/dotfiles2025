@@ -1,13 +1,9 @@
 # Plugins
-robbyrussell/oh-my-zsh
-robbyrussell/oh-my-zsh folder:plugins/git
-robbyrussell/oh-my-zsh folder:plugins/pip
-robbyrussell/oh-my-zsh folder:plugins/tmux
+zsh-users/zsh-autosuggestions
 zsh-users/zsh-completions
 
 esc/conda-zsh-completion
 
-
 # Prompt theme
-robbyrussell/oh-my-zsh folder:plugins/git-prompt
+zsh-users/zsh-syntax-highlighting
 gagbo/moux
