@@ -48,6 +48,9 @@ zmodload zsh/mathfunc
 
 precmd() {}
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=11"
+bindkey '^ ' autosuggest-accept
+
 # local plugins
 # The plugins must either
 # - Be under $NAME/$NAME.plugin.zsh : in this case the plugin.zsh file is sourced
