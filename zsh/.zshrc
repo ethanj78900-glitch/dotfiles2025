@@ -11,6 +11,12 @@ unsetopt autocd beep notify
 bindkey -e
 # End of lines configured by zsh-newuser-install
 
+# Autoload own zsh functions
+# (Completions must be added in fpath before compinit call)
+fpath=(~/.zsh/functions ~/.zsh/functions/completions $fpath)
+autoload -U ~/.zsh/functions/*(:t)
+autoload -U ~/.zsh/functions/completions/*(:t)
+
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/gagbo/.zshrc'
 
@@ -21,10 +27,6 @@ promptinit
 
 # Allow functions in prompt
 setopt prompt_subst
-
-# Autoload own zsh functions
-fpath=(~/.zsh/functions $fpath)
-autoload -U ~/.zsh/functions/*(:t)
 
 # Load colors module
 autoload -U colors
@@ -51,7 +53,6 @@ precmd() {}
 # - Be under $NAME/$NAME.plugin.zsh : in this case the plugin.zsh file is sourced
 # - Have function in $NAME : in this case the folder is added to fpath
 plugins=(
-    cargo
     pip
     tmux
     history
@@ -64,8 +65,9 @@ plugins=(
 for plugin in $plugins; do
   if [[ -e "$HOME/.zsh/plugins/$plugin/$plugin.plugin.zsh" ]]; then
       source "$HOME/.zsh/plugins/$plugin/$plugin.plugin.zsh"
-  else;
+  else
       fpath=($HOME/.zsh/plugins/$plugin $fpath)
+      autoload -U ~/.zsh/plugins/$plugin/*(:t)
   fi
 done
 
