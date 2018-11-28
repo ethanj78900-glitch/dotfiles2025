@@ -88,7 +88,7 @@ i3status:
 	stow -S i3status -t ${HOME}
 	@echo ""
 
-i3: i3blocks i3status
+i3: i3blocks i3status polybar rofi
 	@echo "************** i3 setup  **************"
 	mkdir -p ${HOME}/.config
 	stow -S i3 -t ${HOME}
