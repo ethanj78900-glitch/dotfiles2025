@@ -44,4 +44,4 @@ Emacs.mode-line.attributeBox:        (:line-width 1 :color "#073642")
 !!!!!!!! Colorschemes !!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-#include ".themes/Xresources/sourcerer.theme"
+#include ".themes/Xresources/srcery.theme"
