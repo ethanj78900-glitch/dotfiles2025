@@ -58,3 +58,4 @@ export CEMEF_HOST="maine"
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
     exec startx ~/.xinitrc i3
 fi
+export GPG_TTY=$(tty)

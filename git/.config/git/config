@@ -3,6 +3,7 @@
 # Please adapt and uncomment the following lines:
     name = Gerry Agbobada
     email = gagbobada+git@gmail.com
+	signingkey = E26CA7AB04B35ACBBD9CCC8053F94866E84818F6
 
 [alias]
     co = checkout
@@ -25,3 +26,5 @@
     smtpServer = smtp.gmail.com
     smtpUser = gagbobada@gmail.com
     smtpServerPort = 587
+[gpg]
+	program = gpg2
