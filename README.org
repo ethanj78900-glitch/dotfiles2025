@@ -1,4 +1,4 @@
-#+TITLE: Dotfiles repository
-
-* Unmaintained / DEPRECATED
-I moved my stow dotfiles folder to [[https://framagit.org/gagbo/dotfiles][Framagit]]. You should check there for the latest version
+git clone https://github.com/ethanj78900-glitch/dotfiles2025.git
+ls cd dotfiles2025
+sudo chmod +x dotfiles2025
+make all
